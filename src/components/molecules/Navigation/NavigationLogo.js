@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LogoImg from 'assets/images/logo.png';
 import alt from 'data/alt';
+import routes from 'data/routes';
 
 const Logo = styled.img`
   width: 70px;
@@ -11,7 +12,7 @@ const Logo = styled.img`
 `;
 
 const NavigationLogo = () => (
-  <a href="/">
+  <a href={routes.main}>
     <Logo src={LogoImg} alt={alt.logo} />
   </a>
 );
