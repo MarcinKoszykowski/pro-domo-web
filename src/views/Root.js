@@ -5,6 +5,8 @@ import Footer from 'templates/FooterTemplate';
 import Widgets from 'templates/WidgetsTemplate';
 import Header from 'templates/HeaderTemplate';
 import EQ from 'views/EQ';
+import PD from 'views/PD';
+import PDF from 'views/PDF';
 
 function Root() {
   return (
@@ -13,6 +15,8 @@ function Root() {
       <Header />
       <Switch>
         <Route path="/eques-creditum" component={EQ} />
+        <Route path="/pd" component={PD} />
+        <Route path="/pdf" component={PDF} />
       </Switch>
       <Widgets />
       <Footer />
