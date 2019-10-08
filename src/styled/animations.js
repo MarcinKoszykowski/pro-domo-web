@@ -33,6 +33,14 @@ const animations = {
     0% {opacity: 0}
     100% {opacity: .6}
   `,
+  aboutUsLogoAnimation: keyframes`
+    0% {transform: translateX(300px); opacity: 0}
+    100% {transform: translateX(0); opacity: 1}
+  `,
+  aboutUsTextAnimation: keyframes`
+    0% {transform: translateX(-200px); opacity: 0}
+    100% {transform: translateX(0); opacity: 1}
+  `,
 };
 
 export default animations;

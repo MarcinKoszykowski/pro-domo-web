@@ -12,6 +12,7 @@ import EQ from 'views/EQ';
 import PD from 'views/PD';
 import PDF from 'views/PDF';
 import PP from 'views/PP';
+import Main from 'views/Main';
 
 function Root() {
   const isInternetExplorer = false || !!document.documentMode;
@@ -36,16 +37,17 @@ function Root() {
       <GlobalStyle />
       <Header />
       <Switch>
+        <Route exact path={routes.main} component={Main} />
+        <Route path={routes.pp} component={PP} />
         <Route path={routes.eq} component={EQ} />
         <Route path={routes.pd} component={PD} />
         <Route path={routes.pdf} component={PDF} />
-        <Route path={routes.pp} component={PP} />
         <Route component={Error} />
       </Switch>
       <Widgets />
       <Footer />
-      {isInternetExplorer && <IE />}
       {scrollButton && <ScrollButton />}
+      {isInternetExplorer && <IE />}
     </BrowserRouter>
   );
 }
