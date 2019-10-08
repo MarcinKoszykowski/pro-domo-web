@@ -9,6 +9,26 @@ const animations = {
     0% {opacity: 1}
     100% {opacity: 0}
   `,
+  menuIconAnimation: keyframes`
+    0% {transform: translateY(-100px)}
+    30% {transform: translateY(0)}
+    50% {transform: translateY(-20px)}
+    75% {transform: translateY(0)}
+    90% {transform: translateY(-5px)}
+    100% {transform: translateY(0)}
+  `,
+  navigationLinkHoverAfterAnimation: keyframes`
+    0% {transform: translateX(-5px)}
+    100% {transform: translateX(0)}
+  `,
+  navigationLinkHoverBeforeAnimation: keyframes`
+    0% {transform: translateX(5px)}
+    100% {transform: translateX(0)}
+  `,
+  headerAnimation: keyframes`
+  0% {transform: translateY(-100px)}
+  100% {transform: translateY(0)}
+`,
 };
 
 export default animations;
