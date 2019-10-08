@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyle from 'styled/GlobalStyle';
 import routes from 'data/routes';
+import ScrollButton from 'components/molecules/ScrollButton';
+import IE from 'components/molecules/IE';
 import Error from 'components/organisms/Error';
 import Footer from 'templates/FooterTemplate';
 import Widgets from 'templates/WidgetsTemplate';
@@ -12,7 +14,22 @@ import PDF from 'views/PDF';
 import PP from 'views/PP';
 
 function Root() {
-  // const isInternetExplorer = false || !!document.documentMode;
+  const isInternetExplorer = false || !!document.documentMode;
+
+  const [scrollButton, setScrollButton] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 400) {
+      setScrollButton(true);
+    } else {
+      setScrollButton(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', handleScroll);
+  }, []);
 
   return (
     <BrowserRouter>
@@ -27,6 +44,8 @@ function Root() {
       </Switch>
       <Widgets />
       <Footer />
+      {isInternetExplorer && <IE />}
+      {scrollButton && <ScrollButton />}
     </BrowserRouter>
   );
 }

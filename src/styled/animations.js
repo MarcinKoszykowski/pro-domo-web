@@ -26,9 +26,13 @@ const animations = {
     100% {transform: translateX(0)}
   `,
   headerAnimation: keyframes`
-  0% {transform: translateY(-100px)}
-  100% {transform: translateY(0)}
-`,
+    0% {transform: translateY(-100px)}
+    100% {transform: translateY(0)}
+  `,
+  scrollButton: keyframes`
+    0% {opacity: 0}
+    100% {opacity: .6}
+  `,
 };
 
 export default animations;
