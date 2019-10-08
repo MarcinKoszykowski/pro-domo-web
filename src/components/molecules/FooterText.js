@@ -27,6 +27,9 @@ const Text = styled.p`
   color: ${colors.grey};
   transition: padding 0.2s, font-size 0.2s;
 
+  @media screen and (max-width: 900px) {
+    font-size: 0.9rem;
+  }
   @media screen and (max-width: 750px) {
     padding: 7px 0;
   }
