@@ -22,14 +22,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const Loan = ({ visible }) => (
+const Loan = ({ isVisibility }) => (
   <Wrapper>
-    <LoanImage visible={visible} src={LoanImg} alt={alt.loan} />
+    <LoanImage isVisibility={isVisibility} src={LoanImg} alt={alt.loan} />
   </Wrapper>
 );
 
 Loan.propTypes = {
-  visible: PropTypes.bool.isRequired,
+  isVisibility: PropTypes.bool.isRequired,
 };
 
 export default Loan;

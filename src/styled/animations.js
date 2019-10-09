@@ -46,6 +46,14 @@ const animations = {
     80% {transform: translateY(-30px)}
     100% {transform: translateY(0); opacity: 1}
   `,
+  cityTextAnimation: keyframes`
+    0% {transform: translateX(-300px); opacity: 0}
+    100% {transform: translateX(0); opacity: 1}
+  `,
+  cityImageAnimation: keyframes`
+    0% {transform: translateX(300px); opacity: 0}
+    100% {transform: translateX(0); opacity: 1}
+  `,
 };
 
 export default animations;

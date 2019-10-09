@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from 'react';
+import React, { useState, useEffect, createRef, useCallback } from 'react';
 import styled from 'styled-components';
 import colors from 'styled/colors';
 import Loan from 'components/molecules/Loan';
@@ -11,7 +11,7 @@ const Section = styled.section`
 const reference = createRef();
 
 function LoanTemplate() {
-  const [isVisibility, setVisibility] = useState(false);
+  const [isVisibility, setIsVisibility] = useState(false);
   const [animation, setAnimation] = useState(true);
 
   const elementInViewport = (element, number) => {
@@ -22,33 +22,48 @@ function LoanTemplate() {
   const addAnimation = () => {
     const section = reference.current;
 
-    if (elementInViewport(section, 2)) {
-      setVisibility(true);
+    if (elementInViewport(section, 1.3)) {
+      setIsVisibility(true);
     }
   };
 
-  useEffect(() => {
+  const handleAddAnimation = () => {
     if (animation) {
       window.addEventListener('scroll', addAnimation);
       window.addEventListener('resize', addAnimation);
       window.addEventListener('load', addAnimation);
     }
+  };
 
+  const handleRemoveAnimation = () => {
+    setAnimation(false);
+    window.removeEventListener('scroll', addAnimation);
+    window.removeEventListener('resize', addAnimation);
+    window.removeEventListener('load', addAnimation);
+  };
+
+  const handleWindowSizeAnimation = () => {
     if (window.innerHeight > window.outerHeight) {
       addAnimation();
     }
+  };
+
+  const addAnimationEffect = useCallback(handleAddAnimation, [animation]);
+  const removeAnimationEffect = useCallback(handleRemoveAnimation, [animation]);
+  const windowAnimationEffect = useCallback(handleWindowSizeAnimation);
+
+  useEffect(() => {
+    addAnimationEffect();
+    windowAnimationEffect();
 
     return () => {
-      setAnimation(false);
-      window.removeEventListener('scroll', addAnimation);
-      window.removeEventListener('resize', addAnimation);
-      window.removeEventListener('load', addAnimation);
+      removeAnimationEffect();
     };
-  });
+  }, [animation, addAnimationEffect, removeAnimationEffect, windowAnimationEffect]);
 
   return (
     <Section ref={reference}>
-      <Loan visible={isVisibility} />
+      <Loan isVisibility={isVisibility} />
     </Section>
   );
 }
