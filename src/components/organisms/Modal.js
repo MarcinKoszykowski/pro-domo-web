@@ -14,13 +14,14 @@ const Wrapper = styled.div`
   top: 10%;
   bottom: 10%;
   padding: 0 40px;
+  border-radius: 15px;
   left: 0;
   right: 0;
   z-index: 2;
   align-items: center;
   opacity: 0.95;
   background-color: ${colors.white};
-  box-shadow: 0 0 30px -10px ${colors.colorWithOpacity(colors.black, 0.5)};
+  box-shadow: 0 0 5px 1px ${colors.colorWithOpacity(colors.black, 0.5)};
   transition: top 0.2s, right 0.2s, padding 0.2s, opacity 0.5s ease, transform 0.5s;
 
   @media screen and (max-width: 600px) {

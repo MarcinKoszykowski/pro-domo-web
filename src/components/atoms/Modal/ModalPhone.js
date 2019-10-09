@@ -10,7 +10,7 @@ const Phone = styled.a`
   @media screen and (min-width: 1800px) {
     font-size: 1.3rem;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 1.1rem;
   }
 

@@ -19,12 +19,12 @@ const Image = styled.img`
 
 const Wrapper = styled.div`
   text-align: center;
-  margin-left: 20px;
+  margin: 20px;
   transition: margin-left 0.2s, width 0.2s;
 
   @media screen and (max-width: 850px) {
     width: 90%;
-    margin-left: 10px;
+    margin: 10px;
   }
   @media screen and (max-width: 700px) {
     display: none;
