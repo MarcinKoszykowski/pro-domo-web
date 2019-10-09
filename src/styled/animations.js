@@ -54,6 +54,14 @@ const animations = {
     0% {transform: translateX(300px); opacity: 0}
     100% {transform: translateX(0); opacity: 1}
   `,
+  answerAnimationOn: keyframes`
+    0% {transform: translateY(-40px); opacity: 0}
+    100% {transform: translateY(0); opacity: 1}
+  `,
+  answerAnimationOff: keyframes`
+    0% {transform: translateY(0); opacity: 1}
+    100% {transform: translateY(-40px); opacity: 0}
+  `,
 };
 
 export default animations;

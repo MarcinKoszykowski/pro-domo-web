@@ -13,6 +13,7 @@ import PD from 'views/PD';
 import PDF from 'views/PDF';
 import PP from 'views/PP';
 import Main from 'views/Main';
+import FAQ from 'views/FAQ';
 
 function Root() {
   const isInternetExplorer = false || !!document.documentMode;
@@ -38,6 +39,7 @@ function Root() {
       <Header />
       <Switch>
         <Route exact path={routes.main} component={Main} />
+        <Route path={routes.faq} component={FAQ} />
         <Route path={routes.pp} component={PP} />
         <Route path={routes.eq} component={EQ} />
         <Route path={routes.pd} component={PD} />
