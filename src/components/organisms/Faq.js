@@ -30,9 +30,7 @@ function Faq({ question, answer }) {
   const handleBoxOnClick = () => {
     if (answerIsVisibility) {
       setTogglBox(false);
-      setTimeout(() => {
-        setAnswerIsVisibility(false);
-      }, 350);
+      setTimeout(() => setAnswerIsVisibility(false), 350);
     } else {
       setAnswerIsVisibility(true);
       setTogglBox(true);

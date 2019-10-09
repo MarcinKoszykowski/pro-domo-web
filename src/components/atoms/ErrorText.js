@@ -1,28 +1,48 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import colors from 'styled/colors';
 
 const ErrorText = styled.p`
   font-weight: 500;
-  font-size: ${({ error }) => (error ? `4rem` : `2rem`)};
-  color: ${({ error }) => (error ? colors.orange : colors.greyDark)};
+  font-size: 2rem;
+  color: ${colors.greyDark};
   margin: 0 20px;
-  margin-bottom: ${({ error }) => (error ? `20px` : null)};
   transition: font 0.2s, margin 0.2s;
 
+  ${({ error }) =>
+    error &&
+    css`
+      font-size: 4rem;
+      color: ${colors.orange};
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 1800px) {
+        font-size: 4.5rem;
+        margin-bottom: 30px;
+      }
+      @media screen and (max-width: 840px) {
+        font-size: 3.6rem;
+        margin-bottom: 15px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 2.8rem;
+      }
+    `}
+
   @media screen and (min-width: 1800px) {
-    font-size: ${({ error }) => (error ? `4.5rem` : `2.2rem`)};
-    margin-bottom: ${({ error }) => (error ? `30px` : null)};
+    font-size: 2.2rem;
   }
   @media screen and (max-width: 840px) {
-    font-size: ${({ error }) => (error ? `3.6rem` : `1.7rem`)};
-    margin-bottom: ${({ error }) => (error ? `15px` : null)};
+    font-size: 1.7rem;
   }
   @media screen and (max-width: 600px) {
-    font-size: ${({ error }) => (error ? `3.2rem` : `1.4rem`)};
-    margin-bottom: ${({ error }) => (error ? `10px` : null)};
+    font-size: 1.4rem;
   }
   @media screen and (max-width: 500px) {
-    font-size: ${({ error }) => (error ? `2.8rem` : `1.2rem`)};
+    font-size: 1.2rem;
   }
 `;
 
