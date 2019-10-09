@@ -13,6 +13,10 @@ const Wrapper = styled.div`
   text-align: center;
   animation: ${animations.aboutUsLogoAnimation} 1s ease-out 0.5s backwards;
 
+  @media screen and (min-width: 1800px) {
+    width: 250%;
+  }
+
   @media screen and (max-width: 550px) {
     display: none;
   }

@@ -41,6 +41,11 @@ const animations = {
     0% {transform: translateX(-200px); opacity: 0}
     100% {transform: translateX(0); opacity: 1}
   `,
+  loanImageAnimation: keyframes`
+    0% {transform: translateY(250px); opacity: 0}
+    80% {transform: translateY(-30px)}
+    100% {transform: translateY(0); opacity: 1}
+  `,
 };
 
 export default animations;

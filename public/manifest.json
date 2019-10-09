@@ -1,12 +1,13 @@
 {
   "short_name": "Pro Domo Sp. z o.o.",
   "name": "Pro Domo Sp. z o.o. | Szybkie kredyty gotówkowe",
-  "icons":
-  {
-    "src": "logo192.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  },
+  "icons":[
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
