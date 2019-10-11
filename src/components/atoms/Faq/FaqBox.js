@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from 'styled/colors';
+import { orange } from 'styled/colors';
 import FaqText from 'components/atoms/Faq/FaqText';
 
 const FaqBox = styled.button`
@@ -15,7 +15,7 @@ const FaqBox = styled.button`
   transition: width 0.2s;
 
   &:hover ~ ${FaqText} {
-    color: ${colors.orange};
+    color: ${orange};
   }
 
   @media screen and (max-width: 1300px) {

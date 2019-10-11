@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
-import colors from 'styled/colors';
+import { greyDark, orange } from 'styled/colors';
 
 const ErrorText = styled.p`
   font-weight: 500;
   font-size: 2rem;
-  color: ${colors.greyDark};
+  color: ${greyDark};
   margin: 0 20px;
   transition: font 0.2s, margin 0.2s;
 
@@ -12,7 +12,7 @@ const ErrorText = styled.p`
     error &&
     css`
       font-size: 4rem;
-      color: ${colors.orange};
+      color: ${orange};
       margin-bottom: 20px;
 
       @media screen and (min-width: 1800px) {

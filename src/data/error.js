@@ -1,5 +1,5 @@
 const error = {
-  error: '404',
+  number: '404',
   info: 'Strona, której szukasz, nie istnieje',
   button: 'Wróć do strony głównej',
 };

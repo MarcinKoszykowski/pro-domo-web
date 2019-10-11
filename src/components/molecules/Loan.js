@@ -5,6 +5,7 @@ import alt from 'data/alt';
 import LoanImg from 'assets/images/pozyczka.png';
 import LoanImage from 'components/atoms/LoanImage';
 
+const { loan } = alt;
 const Wrapper = styled.div`
   padding: 30px;
   display: block;
@@ -24,7 +25,7 @@ const Wrapper = styled.div`
 
 const Loan = ({ isVisibility }) => (
   <Wrapper>
-    <LoanImage isVisibility={isVisibility} src={LoanImg} alt={alt.loan} />
+    <LoanImage isVisibility={isVisibility} src={LoanImg} alt={loan} />
   </Wrapper>
 );
 

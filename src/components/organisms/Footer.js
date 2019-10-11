@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import footer from 'data/footer';
 import FooterText from 'components/molecules/FooterText';
 
+const { copyright, created } = footer;
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -22,8 +23,8 @@ const Wrapper = styled.div`
 
 const Footer = () => (
   <Wrapper>
-    <FooterText>{footer.copyright}</FooterText>
-    <FooterText link>{footer.created}</FooterText>
+    <FooterText>{copyright}</FooterText>
+    <FooterText link>{created}</FooterText>
   </Wrapper>
 );
 

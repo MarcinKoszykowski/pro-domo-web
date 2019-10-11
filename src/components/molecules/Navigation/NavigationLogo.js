@@ -4,6 +4,9 @@ import LogoImg from 'assets/images/logo.png';
 import alt from 'data/alt';
 import routes from 'data/routes';
 
+const { main } = routes;
+const { logo } = alt;
+
 const Logo = styled.img`
   width: 70px;
   &:active {
@@ -12,8 +15,8 @@ const Logo = styled.img`
 `;
 
 const NavigationLogo = () => (
-  <a href={routes.main}>
-    <Logo src={LogoImg} alt={alt.logo} />
+  <a href={main}>
+    <Logo src={LogoImg} alt={logo} />
   </a>
 );
 

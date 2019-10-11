@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import colors from 'styled/colors';
+import { orange, grey } from 'styled/colors';
 
 const Button = styled.button`
   position: absolute;
   top: 15px;
   left: 15px;
-  border: 2px solid ${colors.orange};
+  border: 2px solid ${orange};
   background-color: transparent;
   border-radius: 30px;
   height: 25px;
@@ -16,10 +16,10 @@ const Button = styled.button`
 
   &:hover {
     transform: rotate(315deg);
-    border-color: ${colors.grey};
+    border-color: ${grey};
     &::after,
     &::before {
-      background-color: ${colors.grey};
+      background-color: ${grey};
     }
   }
 
@@ -32,7 +32,7 @@ const Button = styled.button`
     width: 10%;
     height: 70%;
     transform: translateX(-50%);
-    background-color: ${colors.orange};
+    background-color: ${orange};
     transition: background-color 0.2s;
   }
 
@@ -45,7 +45,7 @@ const Button = styled.button`
     height: 10%;
     width: 70%;
     transform: translateY(-50%);
-    background-color: ${colors.orange};
+    background-color: ${orange};
     transition: background-color 0.2s;
   }
 `;

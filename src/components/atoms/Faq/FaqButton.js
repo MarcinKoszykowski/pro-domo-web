@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import colors from 'styled/colors';
+import { orange, white } from 'styled/colors';
 
 const FaqButton = styled.div`
   position: relative;
-  background-color: ${colors.white};
+  background-color: ${white};
   height: 30px;
   width: 30px;
   transition: height 0.2s, width 0.2s;
@@ -22,7 +22,7 @@ const FaqButton = styled.div`
     position: absolute;
     top: ${({ toggleBox }) => (toggleBox ? '50%' : '0')};
     left: 50%;
-    background-color: ${colors.orange};
+    background-color: ${orange};
     border-radius: 3px;
     width: 25%;
     height: ${({ toggleBox }) => (toggleBox ? '0' : '100%')};
@@ -35,7 +35,7 @@ const FaqButton = styled.div`
     position: absolute;
     top: 50%;
     left: 0;
-    background-color: ${colors.orange};
+    background-color: ${orange};
     border-radius: 3px;
     width: 100%;
     height: 25%;

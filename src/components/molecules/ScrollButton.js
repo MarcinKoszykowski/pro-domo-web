@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import animations from 'styled/animations';
-import colors from 'styled/colors';
+import { orange } from 'styled/colors';
 import arrowTop from 'assets/icons/caret-up.svg';
 
+const { scrollButton } = animations;
 const Button = styled.img`
   position: fixed;
   right: 20px;
   bottom: 12.5px;
   width: 35px;
   height: 35px;
-  background-color: ${colors.orange};
+  background-color: ${orange};
   opacity: 0.6;
   border-radius: 5px;
   cursor: pointer;
-  animation: 0.3s ${animations.scrollButton} ease-in;
+  animation: 0.3s ${scrollButton} ease-in;
   transition: bottom 0.2s, right 0.2s, width 0.2s, height 0.2s, opacity 0.2s;
 
   &:hover {

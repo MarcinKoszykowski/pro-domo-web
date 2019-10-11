@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import colors from 'styled/colors';
+import { white } from 'styled/colors';
 
 const IEText = styled.p`
   width: 100%;
   font-weight: 500;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  color: ${colors.white};
+  color: ${white};
   transition: font 0.2s;
 
   @media screen and (min-width: 1800px) {

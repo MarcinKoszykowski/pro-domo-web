@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
-import colors from 'styled/colors';
+import { grey } from 'styled/colors';
 
 const ModalText = styled.p`
-  color: ${colors.grey};
+  color: ${grey};
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 5px;

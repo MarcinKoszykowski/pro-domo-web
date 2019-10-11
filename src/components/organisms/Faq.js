@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import colors from 'styled/colors';
+import { black } from 'styled/colors';
 import FaqAnswer from 'components/molecules/Faq/FaqAnswer';
 import FaqQuestion from 'components/molecules/Faq/FaqQuestion';
 
 const Wrapper = styled.div`
-  color: ${colors.black};
+  color: ${black};
   padding: 1px 15px;
   width: 100%;
   margin-top: 35px;

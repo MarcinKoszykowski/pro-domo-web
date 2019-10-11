@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import mapValue from 'data/map';
+import { section, office } from 'data/map';
 import MapTitle from 'components/atoms/Map/MapTitle';
 import MapCities from 'components/molecules/Map/MapCities';
-import citiesValue from 'data/cities';
+import { section as citiesSection, office as citiesOffice } from 'data/cities';
 
 const Wrapper = styled.div`
   position: relative;
@@ -25,9 +25,9 @@ const Wrapper = styled.div`
   }
 `;
 
-function MapText({ section, cityButtonOnClick }) {
-  const map = section ? mapValue.section : mapValue.office;
-  const cities = section ? citiesValue.section : citiesValue.office;
+function MapText({ main, cityButtonOnClick }) {
+  const map = main ? section : office;
+  const cities = main ? citiesSection : citiesOffice;
 
   return (
     <Wrapper>
@@ -39,11 +39,11 @@ function MapText({ section, cityButtonOnClick }) {
 
 MapText.propTypes = {
   cityButtonOnClick: PropTypes.func.isRequired,
-  section: PropTypes.bool,
+  main: PropTypes.bool,
 };
 
 MapText.defaultProps = {
-  section: false,
+  main: false,
 };
 
 export default MapText;

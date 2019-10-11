@@ -1,11 +1,11 @@
 import React, { useState, useEffect, createRef, useCallback } from 'react';
 import styled from 'styled-components';
-import colors from 'styled/colors';
+import { colorWithOpacity, orange } from 'styled/colors';
 import Loan from 'components/molecules/Loan';
 
 const Section = styled.section`
   text-align: center;
-  background-color: ${colors.colorWithOpacity(colors.orange, 0.95)};
+  background-color: ${colorWithOpacity(orange, 0.95)};
 `;
 
 const reference = createRef();
@@ -59,7 +59,7 @@ function LoanTemplate() {
     return () => {
       removeAnimationEffect();
     };
-  }, [animation, addAnimationEffect, removeAnimationEffect, windowAnimationEffect]);
+  }, [addAnimationEffect, removeAnimationEffect, windowAnimationEffect]);
 
   return (
     <Section ref={reference}>

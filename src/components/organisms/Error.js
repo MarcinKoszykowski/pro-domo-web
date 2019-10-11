@@ -4,6 +4,7 @@ import ErrorText from 'components/atoms/ErrorText';
 import ErrorButton from 'components/molecules/ErrorButton';
 import error from 'data/error';
 
+const { number, info } = error;
 const Wrapper = styled.section`
   text-align: center;
   margin: 0 auto;
@@ -18,8 +19,8 @@ const Wrapper = styled.section`
 
 const Error = () => (
   <Wrapper>
-    <ErrorText error>{error.error}</ErrorText>
-    <ErrorText>{error.info}</ErrorText>
+    <ErrorText error>{number}</ErrorText>
+    <ErrorText>{info}</ErrorText>
     <ErrorButton />
   </Wrapper>
 );

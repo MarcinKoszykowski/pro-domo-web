@@ -5,6 +5,7 @@ import MapText from 'components/organisms/MapText';
 import MapImage from 'components/molecules/Map/MapImage';
 import animations from 'styled/animations';
 
+const { cityTextAnimation } = animations;
 const Section = styled.section`
   position: relative;
   transition: margin 0.2s, width 0.2s;
@@ -45,7 +46,7 @@ const TextWrapper = styled.div`
     isVisibility &&
     css`
       visibility: visible;
-      animation: ${animations.cityTextAnimation} 1s ease-out 0.5s backwards;
+      animation: ${cityTextAnimation} 1s ease-out 0.5s backwards;
     `}
 `;
 
@@ -87,7 +88,7 @@ function MapTemplate() {
     }
   };
 
-  const handleAddAnimation = () => {
+  const handleAddEventListener = () => {
     if (animation) {
       window.addEventListener('scroll', addAnimation);
       window.addEventListener('resize', addAnimation);
@@ -95,7 +96,7 @@ function MapTemplate() {
     }
   };
 
-  const handleRemoveAnimation = () => {
+  const handleRemoveEventListener = () => {
     setAnimation(false);
     window.removeEventListener('scroll', addAnimation);
     window.removeEventListener('resize', addAnimation);
@@ -108,8 +109,8 @@ function MapTemplate() {
     }
   };
 
-  const addAnimationEffect = useCallback(handleAddAnimation, [animation]);
-  const removeAnimationEffect = useCallback(handleRemoveAnimation, [animation]);
+  const addAnimationEffect = useCallback(handleAddEventListener, [animation]);
+  const removeAnimationEffect = useCallback(handleRemoveEventListener, [animation]);
   const windowAnimationEffect = useCallback(handleWindowSizeAnimation);
 
   useEffect(() => {
@@ -119,14 +120,14 @@ function MapTemplate() {
     return () => {
       removeAnimationEffect();
     };
-  }, [animation, addAnimationEffect, removeAnimationEffect, windowAnimationEffect]);
+  }, [addAnimationEffect, removeAnimationEffect, windowAnimationEffect]);
 
   return (
     <Section ref={reference}>
       {toggleModal && <Modal city={city} office={office} modalButtonOnClick={handleModalButton} />}
       <Wrapper>
         <TextWrapper isVisibility={isVisibility}>
-          <MapText section cityButtonOnClick={handleSectionButton} />
+          <MapText main cityButtonOnClick={handleSectionButton} />
           <MapText cityButtonOnClick={handleOfficeButton} />
         </TextWrapper>
         <MapImage isVisibility={isVisibility} />

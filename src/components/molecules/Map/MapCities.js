@@ -1,11 +1,14 @@
 import React from 'react';
 import MapCity from 'components/atoms/Map/MapCity';
 
-const MapCities = ({ cities, map, cityButtonOnClick }) =>
-  cities.map(city => (
-    <MapCity onClick={() => cityButtonOnClick(city)} key={map.key(city)}>
+function MapCities({ cities, map, cityButtonOnClick }) {
+  const { key } = map;
+
+  return cities.map(city => (
+    <MapCity onClick={() => cityButtonOnClick(city)} key={key(city)}>
       {city}
     </MapCity>
   ));
+}
 
 export default MapCities;

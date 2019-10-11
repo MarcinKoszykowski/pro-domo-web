@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from 'styled/colors';
+import { colorWithOpacity, grey, white } from 'styled/colors';
 import animations from 'styled/animations';
 import NavigationLogo from 'components/molecules/Navigation/NavigationLogo';
 import Navigation from 'components/organisms/Navigation';
 
+const { headerAnimation } = animations;
 const Header = styled.header`
   font-weight: 500;
   position: fixed;
@@ -13,9 +14,9 @@ const Header = styled.header`
   top: 0;
   left: 0;
   min-width: 290px;
-  background-color: ${colors.colorWithOpacity(colors.white, 0.8)};
-  box-shadow: 0 5px 5px -5px ${colors.grey};
-  animation: ${animations.headerAnimation} 1s ease 1s backwards;
+  background-color: ${colorWithOpacity(white, 0.8)};
+  box-shadow: 0 5px 5px -5px ${grey};
+  animation: ${headerAnimation} 1s ease 1s backwards;
 `;
 
 const Wrapper = styled.nav`

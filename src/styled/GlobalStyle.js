@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import colors from 'styled/colors';
+import { orange, blue } from 'styled/colors';
 import animations from 'styled/animations';
 
 const GlobalStyle = createGlobalStyle`
@@ -32,10 +32,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
-        color: ${colors.orange};
+        color: ${orange};
         transition: color 0.3s ease;
 
-        &:hover {color: ${colors.blue}}
+        &:hover {color: ${blue}}
     }
 `;
 

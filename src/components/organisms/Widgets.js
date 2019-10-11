@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import WidgetsHyperLink from 'components/molecules/WidgetsHyperLink';
 import WidgetsText from 'components/atoms/WidgetsText';
-import widgets from 'data/widgets';
+import { link, address } from 'data/widgets';
+import routes from 'data/routes';
 
 const Wrapper = styled.div`
   display: grid;
@@ -38,21 +39,21 @@ const Column = styled.div`
 const Widgets = () => (
   <Wrapper>
     <Column>
-      <WidgetsHyperLink link="/">{widgets.link.main}</WidgetsHyperLink>
-      <WidgetsHyperLink link="/formularz-kontaktowy">{widgets.link.form}</WidgetsHyperLink>
-      <WidgetsHyperLink link="/pytania-i-odpowiedzi">{widgets.link.faq}</WidgetsHyperLink>
-      <WidgetsHyperLink link="/kariera">{widgets.link.carrer}</WidgetsHyperLink>
+      <WidgetsHyperLink link={routes.main}>{link.main}</WidgetsHyperLink>
+      <WidgetsHyperLink link={routes.form}>{link.form}</WidgetsHyperLink>
+      <WidgetsHyperLink link={routes.faq}>{link.faq}</WidgetsHyperLink>
+      <WidgetsHyperLink link={routes.career}>{link.carrer}</WidgetsHyperLink>
     </Column>
     <Column>
-      <WidgetsHyperLink link="/polityka-prywatnosci">{widgets.link.pp}</WidgetsHyperLink>
-      <WidgetsHyperLink link="/eques-creditum">{widgets.link.eq}</WidgetsHyperLink>
-      <WidgetsHyperLink link="/pd">{widgets.link.pd}</WidgetsHyperLink>
-      <WidgetsHyperLink link="/pdf">{widgets.link.pdf}</WidgetsHyperLink>
+      <WidgetsHyperLink link={routes.pp}>{link.pp}</WidgetsHyperLink>
+      <WidgetsHyperLink link={routes.eq}>{link.eq}</WidgetsHyperLink>
+      <WidgetsHyperLink link={routes.pd}>{link.pd}</WidgetsHyperLink>
+      <WidgetsHyperLink link={routes.pdf}>{link.pdf}</WidgetsHyperLink>
     </Column>
     <Column>
-      <WidgetsText>{widgets.address.title}</WidgetsText>
-      <WidgetsText>{widgets.address.address_1}</WidgetsText>
-      <WidgetsText>{widgets.address.address_2}</WidgetsText>
+      <WidgetsText>{address.title}</WidgetsText>
+      <WidgetsText>{address.address_1}</WidgetsText>
+      <WidgetsText>{address.address_2}</WidgetsText>
     </Column>
   </Wrapper>
 );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import markerIcon from 'assets/icons/map-marker.svg';
-import colors from 'styled/colors';
+import { orangeDark } from 'styled/colors';
 
 const MapCity = styled.p`
   position: relative;
@@ -11,7 +11,7 @@ const MapCity = styled.p`
   transition: font-size 0.2s, margin 0.2s;
 
   &:hover {
-    color: ${colors.orangeDark};
+    color: ${orangeDark};
   }
 
   @media screen and (min-width: 1800px) {

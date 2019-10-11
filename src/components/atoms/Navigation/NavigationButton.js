@@ -3,15 +3,16 @@ import IconFAQ from 'assets/icons/question-circle.svg';
 import IconForm from 'assets/icons/clipboard-list.svg';
 import IconCareer from 'assets/icons/briefcase.svg';
 import animations from 'styled/animations';
-import colors from 'styled/colors';
+import { grey } from 'styled/colors';
 
+const { menuIconAnimation } = animations;
 const NavigationButton = styled.button`
   cursor: pointer;
   margin: 0 10px;
   width: 40px;
   height: 40px;
-  background-color: ${colors.grey};
-  animation: ${animations.menuIconAnimation} 1.5s ease 0.5s backwards;
+  background-color: ${grey};
+  animation: ${menuIconAnimation} 1.5s ease 0.5s backwards;
   transition: margin 0.2s, width 0.2s, height 0.2s, display 0.5s;
 
   &:hover {

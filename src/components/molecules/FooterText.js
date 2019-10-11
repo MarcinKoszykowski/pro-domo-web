@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import footer from 'data/footer';
-import colors from 'styled/colors';
+import { blue, orangeDark, grey } from 'styled/colors';
 
+const { code, link: linkFooter } = footer;
 const Link = styled.a`
-  color: ${colors.blue};
+  color: ${blue};
 
   &:hover {
-    color: ${colors.orangeDark};
+    color: ${orangeDark};
     text-decoration: none;
   }
 
@@ -24,7 +25,7 @@ const Link = styled.a`
 const Text = styled.p`
   text-align: center;
   font-weight: 500;
-  color: ${colors.grey};
+  color: ${grey};
   transition: padding 0.2s, font-size 0.2s;
 
   @media screen and (max-width: 900px) {
@@ -46,8 +47,8 @@ const FooterText = ({ link, children }) => (
   <Text>
     {children}
     {link && (
-      <Link rel="noopener noreferrer" target="_blank" href={footer.link}>
-        {footer.code}
+      <Link rel="noopener noreferrer" target="_blank" href={linkFooter}>
+        {code}
       </Link>
     )}
   </Text>

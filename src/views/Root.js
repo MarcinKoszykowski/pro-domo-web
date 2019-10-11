@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyle from 'styled/GlobalStyle';
 import routes from 'data/routes';
@@ -8,6 +8,7 @@ import Error from 'components/organisms/Error';
 import Footer from 'templates/FooterTemplate';
 import Widgets from 'templates/WidgetsTemplate';
 import Header from 'templates/HeaderTemplate';
+import Form from 'views/Form';
 import EQ from 'views/EQ';
 import PD from 'views/PD';
 import PDF from 'views/PDF';
@@ -20,7 +21,7 @@ function Root() {
 
   const [scrollButton, setScrollButton] = useState(false);
 
-  const handleScroll = () => {
+  const toggleScrollButton = () => {
     if (window.scrollY > 400) {
       setScrollButton(true);
     } else {
@@ -28,10 +29,14 @@ function Root() {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('load', handleScroll);
-  }, []);
+  const handleEventListener = () => {
+    window.addEventListener('scroll', toggleScrollButton);
+    window.addEventListener('load', toggleScrollButton);
+  };
+
+  const scrollButtonEffect = useCallback(handleEventListener, [scrollButton]);
+
+  useEffect(() => scrollButtonEffect(), [scrollButtonEffect]);
 
   return (
     <BrowserRouter>
@@ -40,6 +45,7 @@ function Root() {
       <Switch>
         <Route exact path={routes.main} component={Main} />
         <Route path={routes.faq} component={FAQ} />
+        <Route path={routes.form} component={Form} />
         <Route path={routes.pp} component={PP} />
         <Route path={routes.eq} component={EQ} />
         <Route path={routes.pd} component={PD} />

@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import animations from 'styled/animations';
-import colors from 'styled/colors';
+import { orange } from 'styled/colors';
 
+const { answerAnimationOn, answerAnimationOff } = animations;
 const Wrapper = styled.div`
   cursor: auto;
   font-size: 0.95rem;
@@ -12,10 +13,8 @@ const Wrapper = styled.div`
   padding: 15px 30px 10px 40px;
   text-align: justify;
   overflow: hidden;
-  border-bottom: 1px solid ${colors.orange};
-  animation: ${({ toggleBox }) =>
-      toggleBox ? animations.answerAnimationOn : animations.answerAnimationOff}
-    0.5s ease;
+  border-bottom: 1px solid ${orange};
+  animation: ${({ toggleBox }) => (toggleBox ? answerAnimationOn : answerAnimationOff)} 0.5s ease;
   transition: font-size 0.2s, padding 0.2s;
 
   @media screen and (max-width: 1000px) {

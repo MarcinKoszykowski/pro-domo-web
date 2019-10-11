@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import colors from 'styled/colors';
+import { white, colorWithOpacity, black } from 'styled/colors';
 import ModalButton from 'components/atoms/Modal/ModalButton';
 import ModalSection from 'components/molecules/Modal/ModalSection';
 import ModalOffice from 'components/molecules/Modal/ModalOffice';
@@ -20,8 +20,8 @@ const Wrapper = styled.div`
   z-index: 2;
   align-items: center;
   opacity: 0.95;
-  background-color: ${colors.white};
-  box-shadow: 0 0 5px 1px ${colors.colorWithOpacity(colors.black, 0.5)};
+  background-color: ${white};
+  box-shadow: 0 0 5px 1px ${colorWithOpacity(black, 0.5)};
   transition: top 0.2s, right 0.2s, padding 0.2s, opacity 0.5s ease, transform 0.5s;
 
   @media screen and (max-width: 600px) {

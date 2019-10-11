@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import colors from '../../styled/colors';
+import { white } from 'styled/colors';
 
 const Button = styled.button`
   letter-spacing: 1px;
   color: ${({ color }) => color};
   border: 2px solid ${({ color }) => color};
-  background-color: ${colors.white};
+  background-color: ${white};
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;

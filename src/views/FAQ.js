@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FaqTemplate from 'templates/FaqTemplate';
 
-const Section = styled.div`
+const Section = styled.section`
   padding: 25px 150px 50px 225px;
   transition: padding 0.2s, margin 0.2s, width 0.2s;
 

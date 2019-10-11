@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import WidgetsText from 'components/atoms/WidgetsText';
-import colors from 'styled/colors';
+import { white, orange, blue } from 'styled/colors';
 
 const StyledWidgetText = styled(WidgetsText)`
-  color: ${colors.white};
+  color: ${white};
   cursor: pointer;
   transition: transform 0.2s ease, font-size 0.2s, margin 0.2s;
 
   &:hover {
-    color: ${colors.orange};
+    color: ${orange};
     transform: scale(1.1);
   }
 
   &:active {
-    color: ${colors.blue};
+    color: ${blue};
   }
 `;
 

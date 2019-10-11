@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import Button from 'components/atoms/Button';
 import routes from 'data/routes';
 import error from 'data/error';
-import colors from 'styled/colors';
+import { orange, blue } from 'styled/colors';
+
+const { main } = routes;
+const { button } = error;
 
 const StyledButton = styled(Button)`
   font-size: 1.2rem;
@@ -35,9 +38,9 @@ const StyledButton = styled(Button)`
 `;
 
 const ErrorButton = () => (
-  <Link to={routes.main}>
-    <StyledButton color={colors.orange} hoverColor={colors.blue}>
-      {error.button}
+  <Link to={main}>
+    <StyledButton color={orange} hoverColor={blue}>
+      {button}
     </StyledButton>
   </Link>
 );

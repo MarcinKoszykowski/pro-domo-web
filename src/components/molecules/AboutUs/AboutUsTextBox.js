@@ -4,6 +4,7 @@ import AboutUsTitle from 'components/atoms/AboutUs/AboutUsTitle';
 import AboutUsText from 'components/atoms/AboutUs/AboutUsText';
 import aboutUs from 'data/aboutUs';
 
+const { title, text } = aboutUs;
 const Wrapper = styled.div`
   position: relative;
   margin-right: 6%;
@@ -16,8 +17,8 @@ const Wrapper = styled.div`
 
 const AboutUsTextBox = () => (
   <Wrapper>
-    <AboutUsTitle>{aboutUs.title}</AboutUsTitle>
-    <AboutUsText>{aboutUs.text}</AboutUsText>
+    <AboutUsTitle>{title}</AboutUsTitle>
+    <AboutUsText>{text}</AboutUsText>
   </Wrapper>
 );
 

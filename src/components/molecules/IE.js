@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from 'styled/colors';
+import { orangeDark } from 'styled/colors';
 import ie from 'data/ie';
 import IEText from 'components/atoms/IEText';
 
@@ -13,7 +13,7 @@ const Wrapper = styled.section`
   z-index: 2;
   display: inline-flex;
   text-align: center;
-  background-color: ${colors.orangeDark};
+  background-color: ${orangeDark};
   border-radius: 10px;
   transform: translateY(-50%);
   transition: 0.2s left, 0.2s right, 0.2s padding;
@@ -38,7 +38,7 @@ const Wrapper = styled.section`
 
 const IE = () => (
   <Wrapper>
-    <IEText>{ie.text}</IEText>
+    <IEText>{ie}</IEText>
   </Wrapper>
 );
 
