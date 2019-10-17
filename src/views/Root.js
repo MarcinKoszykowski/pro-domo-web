@@ -19,13 +19,15 @@ import AppContext from 'context';
 
 function Root() {
   const isInternetExplorer = false || !!document.documentMode;
+  const { addEventListener, removeEventListener } = window;
 
   const [scrollButton, setScrollButton] = useState(false);
   const [mapIsVisibility, setMapIsVisibility] = useState(false);
   const [loanIsVisibility, setLoanIsVisibility] = useState(false);
 
   const toggleScrollButton = () => {
-    if (window.scrollY > 400) {
+    const { scrollY } = window;
+    if (scrollY > 400) {
       setScrollButton(true);
     } else {
       setScrollButton(false);
@@ -33,19 +35,20 @@ function Root() {
   };
 
   const handleEventListener = () => {
-    window.addEventListener('scroll', toggleScrollButton);
-    window.addEventListener('load', toggleScrollButton);
+    addEventListener('scroll', toggleScrollButton);
+    addEventListener('load', toggleScrollButton);
   };
 
   const elementInViewport = (element, number) => {
-    const top = element.offsetTop;
-    return top * number < window.pageYOffset + window.innerHeight;
+    const { pageYOffset, innerHeight } = window;
+    const { offsetTop } = element;
+    return offsetTop * number < pageYOffset + innerHeight;
   };
 
   const addAnimation = (valueReference, number, setVisibilityFunction) => {
-    const section = valueReference.current;
+    const { current } = valueReference;
 
-    if (elementInViewport(section, number)) {
+    if (elementInViewport(current, number)) {
       setVisibilityFunction(true);
     }
   };
@@ -54,19 +57,20 @@ function Root() {
   const handleSetLoanIsVisibility = bool => setLoanIsVisibility(bool);
 
   const handleAddEventListener = animationFunction => {
-    window.addEventListener('scroll', animationFunction);
-    window.addEventListener('resize', animationFunction);
-    window.addEventListener('load', animationFunction);
+    addEventListener('scroll', animationFunction);
+    addEventListener('resize', animationFunction);
+    addEventListener('load', animationFunction);
   };
 
   const handleRemoveEventListener = animationFunction => {
-    window.removeEventListener('scroll', animationFunction);
-    window.removeEventListener('resize', animationFunction);
-    window.removeEventListener('load', animationFunction);
+    removeEventListener('scroll', animationFunction);
+    removeEventListener('resize', animationFunction);
+    removeEventListener('load', animationFunction);
   };
 
   const handleWindowSizeAnimation = animationFunction => {
-    if (window.innerHeight > window.outerHeight) {
+    const { innerHeight, outerHeight } = window;
+    if (innerHeight > outerHeight) {
       animationFunction();
     }
   };
@@ -85,19 +89,20 @@ function Root() {
 
   useEffect(() => scrollButtonEffect(), [scrollButtonEffect]);
 
+  const { main, faq, form, pp, eq, pd, pdf } = routes;
   return (
     <AppContext.Provider value={contextElement}>
       <BrowserRouter>
         <GlobalStyle />
         <Header />
         <Switch>
-          <Route exact path={routes.main} component={Main} />
-          <Route path={routes.faq} component={FAQ} />
-          <Route path={routes.form} component={Form} />
-          <Route path={routes.pp} component={PP} />
-          <Route path={routes.eq} component={EQ} />
-          <Route path={routes.pd} component={PD} />
-          <Route path={routes.pdf} component={PDF} />
+          <Route exact path={main} component={Main} />
+          <Route path={faq} component={FAQ} />
+          <Route path={form} component={Form} />
+          <Route path={pp} component={PP} />
+          <Route path={eq} component={EQ} />
+          <Route path={pd} component={PD} />
+          <Route path={pdf} component={PDF} />
           <Route component={Error} />
         </Switch>
         <Widgets />

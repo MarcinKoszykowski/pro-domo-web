@@ -58,7 +58,10 @@ const StyledButton = styled(Button)`
 `;
 
 function FormTemplate() {
-  const [type, setType] = useState(individual.type);
+  const { type: individualType } = individual;
+  const { type: firmType } = firm;
+
+  const [type, setType] = useState(individualType);
   const [data, setData] = useState({
     name: '',
     firm: '',
@@ -87,7 +90,7 @@ function FormTemplate() {
       <FormTitle>{title}</FormTitle>
       <FormRadio radioButtonOnChange={handleRadioButtonChange} type={type} />
       <Form autoComplete="off" onSubmit={e => handleSubmit(e)}>
-        {type === firm.type ? (
+        {type === firmType ? (
           <FormFirm data={data} inputChange={handleInputChange} />
         ) : (
           <FormIndividual data={data} inputChange={handleInputChange} />

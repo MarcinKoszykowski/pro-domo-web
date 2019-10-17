@@ -9,15 +9,20 @@ const Wrapper = styled.ul`
   margin: 0 10px;
 `;
 
-const Navigation = () => (
-  <Wrapper>
-    <NavigationHyperLink link={routes.form}>{text.form}</NavigationHyperLink>
-    <NavigationHyperLink link={routes.faq}>{text.faq}</NavigationHyperLink>
-    <NavigationHyperLink link={routes.career}>{text.career}</NavigationHyperLink>
-    <NavigationHyperLinkButton type={type.form} link={routes.form} />
-    <NavigationHyperLinkButton type={type.faq} link={routes.faq} />
-    <NavigationHyperLinkButton type={type.career} link={routes.career} />
-  </Wrapper>
-);
+function Navigation() {
+  const { form, faq, career } = routes;
+  const { form: formType, faq: faqType, career: careerType } = type;
+  const { form: formText, faq: faqText, career: careerText } = text;
+  return (
+    <Wrapper>
+      <NavigationHyperLink link={form}>{formText}</NavigationHyperLink>
+      <NavigationHyperLink link={faq}>{faqText}</NavigationHyperLink>
+      <NavigationHyperLink link={career}>{careerText}</NavigationHyperLink>
+      <NavigationHyperLinkButton type={formType} link={form} />
+      <NavigationHyperLinkButton type={faqType} link={faq} />
+      <NavigationHyperLinkButton type={careerType} link={career} />
+    </Wrapper>
+  );
+}
 
 export default Navigation;

@@ -36,26 +36,41 @@ const Column = styled.div`
   }
 `;
 
-const Widgets = () => (
-  <Wrapper>
-    <Column>
-      <WidgetsHyperLink link={routes.main}>{link.main}</WidgetsHyperLink>
-      <WidgetsHyperLink link={routes.form}>{link.form}</WidgetsHyperLink>
-      <WidgetsHyperLink link={routes.faq}>{link.faq}</WidgetsHyperLink>
-      <WidgetsHyperLink link={routes.career}>{link.carrer}</WidgetsHyperLink>
-    </Column>
-    <Column>
-      <WidgetsHyperLink link={routes.pp}>{link.pp}</WidgetsHyperLink>
-      <WidgetsHyperLink link={routes.eq}>{link.eq}</WidgetsHyperLink>
-      <WidgetsHyperLink link={routes.pd}>{link.pd}</WidgetsHyperLink>
-      <WidgetsHyperLink link={routes.pdf}>{link.pdf}</WidgetsHyperLink>
-    </Column>
-    <Column>
-      <WidgetsText>{address.title}</WidgetsText>
-      <WidgetsText>{address.address_1}</WidgetsText>
-      <WidgetsText>{address.address_2}</WidgetsText>
-    </Column>
-  </Wrapper>
-);
+function Widgets() {
+  const { main, form, faq, career, pp, eq, pd, pdf } = link;
+  const { title, address1, address2 } = address;
+  const {
+    main: routeMain,
+    form: routeForm,
+    faq: routeFAQ,
+    career: routeCareer,
+    pp: routePP,
+    eq: routeEQ,
+    pd: routePD,
+    pdf: routePDF,
+  } = routes;
+
+  return (
+    <Wrapper>
+      <Column>
+        <WidgetsHyperLink link={routeMain}>{main}</WidgetsHyperLink>
+        <WidgetsHyperLink link={routeForm}>{form}</WidgetsHyperLink>
+        <WidgetsHyperLink link={routeFAQ}>{faq}</WidgetsHyperLink>
+        <WidgetsHyperLink link={routeCareer}>{career}</WidgetsHyperLink>
+      </Column>
+      <Column>
+        <WidgetsHyperLink link={routePP}>{pp}</WidgetsHyperLink>
+        <WidgetsHyperLink link={routeEQ}>{eq}</WidgetsHyperLink>
+        <WidgetsHyperLink link={routePD}>{pd}</WidgetsHyperLink>
+        <WidgetsHyperLink link={routePDF}>{pdf}</WidgetsHyperLink>
+      </Column>
+      <Column>
+        <WidgetsText>{title}</WidgetsText>
+        <WidgetsText>{address1}</WidgetsText>
+        <WidgetsText>{address2}</WidgetsText>
+      </Column>
+    </Wrapper>
+  );
+}
 
 export default Widgets;

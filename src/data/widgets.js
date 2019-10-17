@@ -2,7 +2,7 @@ const link = {
   main: 'Strona główna',
   form: 'Formularz kontaktowy',
   faq: 'Pytania i odpowiedzi',
-  carrer: 'Kariera',
+  career: 'Kariera',
   pp: 'Polityka prywatności i polityka cookies',
   eq: 'RODO – Eques Creditum',
   pd: 'RODO - Pro Domo',
@@ -10,8 +10,8 @@ const link = {
 };
 const address = {
   title: 'Pro Domo Sp. z o.o.',
-  address_1: 'ul. Bulońska 16 / 17',
-  address_2: '80 – 288 Gdańsk',
+  address1: 'ul. Bulońska 16 / 17',
+  address2: '80 – 288 Gdańsk',
 };
 
 export { link, address };
