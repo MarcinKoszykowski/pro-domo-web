@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import alt from 'data/alt';
 import LoanImg from 'assets/images/pozyczka.png';
 import LoanImage from 'components/atoms/LoanImage';
+import AppContext from 'context';
 
 const { loan } = alt;
 const Wrapper = styled.div`
@@ -23,14 +23,13 @@ const Wrapper = styled.div`
   }
 `;
 
-const Loan = ({ isVisibility }) => (
-  <Wrapper>
-    <LoanImage isVisibility={isVisibility} src={LoanImg} alt={loan} />
-  </Wrapper>
-);
-
-Loan.propTypes = {
-  isVisibility: PropTypes.bool.isRequired,
-};
+function Loan() {
+  const { loanIsVisibility } = useContext(AppContext);
+  return (
+    <Wrapper>
+      <LoanImage elementVisibility={loanIsVisibility} src={LoanImg} alt={loan} />
+    </Wrapper>
+  );
+}
 
 export default Loan;

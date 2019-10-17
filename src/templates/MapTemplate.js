@@ -1,11 +1,13 @@
-import React, { useState, useEffect, createRef, useCallback } from 'react';
+import React, { useState, useEffect, createRef, useContext } from 'react';
 import styled, { css } from 'styled-components';
 import Modal from 'components/organisms/Modal';
 import MapText from 'components/organisms/MapText';
 import MapImage from 'components/molecules/Map/MapImage';
 import animations from 'styled/animations';
+import AppContext from 'context';
 
 const { cityTextAnimation } = animations;
+
 const Section = styled.section`
   position: relative;
   transition: margin 0.2s, width 0.2s;
@@ -42,8 +44,8 @@ const TextWrapper = styled.div`
   width: 100%;
   visibility: hidden;
 
-  ${({ isVisibility }) =>
-    isVisibility &&
+  ${({ elementVisibility }) =>
+    elementVisibility &&
     css`
       visibility: visible;
       animation: ${cityTextAnimation} 1s ease-out 0.5s backwards;
@@ -54,10 +56,16 @@ const reference = createRef();
 
 function MapTemplate() {
   const [toggleModal, setToggleModal] = useState(false);
-  const [animation, setAnimation] = useState(true);
   const [office, setOffice] = useState(false);
-  const [isVisibility, setIsVisibility] = useState(false);
   const [city, setCity] = useState('');
+  const {
+    mapIsVisibility,
+    handleSetMapIsVisibility,
+    addAnimation,
+    handleRemoveEventListener,
+    handleAddEventListener,
+    handleWindowSizeAnimation,
+  } = useContext(AppContext);
 
   const handleModalButton = () => {
     setToggleModal(false);
@@ -75,43 +83,10 @@ function MapTemplate() {
     setCity(value);
   };
 
-  const elementInViewport = (element, number) => {
-    const top = element.offsetTop;
-    return top * number < window.pageYOffset + window.innerHeight;
-  };
-
-  const addAnimation = () => {
-    const section = reference.current;
-
-    if (elementInViewport(section, 1.3)) {
-      setIsVisibility(true);
-    }
-  };
-
-  const handleAddEventListener = () => {
-    if (animation) {
-      window.addEventListener('scroll', addAnimation);
-      window.addEventListener('resize', addAnimation);
-      window.addEventListener('load', addAnimation);
-    }
-  };
-
-  const handleRemoveEventListener = () => {
-    setAnimation(false);
-    window.removeEventListener('scroll', addAnimation);
-    window.removeEventListener('resize', addAnimation);
-    window.removeEventListener('load', addAnimation);
-  };
-
-  const handleWindowSizeAnimation = () => {
-    if (window.innerHeight > window.outerHeight) {
-      addAnimation();
-    }
-  };
-
-  const addAnimationEffect = useCallback(handleAddEventListener, [animation]);
-  const removeAnimationEffect = useCallback(handleRemoveEventListener, [animation]);
-  const windowAnimationEffect = useCallback(handleWindowSizeAnimation);
+  const handleMapAnimation = () => addAnimation(reference, 1.5, handleSetMapIsVisibility);
+  const addAnimationEffect = () => handleAddEventListener(handleMapAnimation);
+  const removeAnimationEffect = () => handleRemoveEventListener(handleMapAnimation);
+  const windowAnimationEffect = () => handleWindowSizeAnimation(handleMapAnimation);
 
   useEffect(() => {
     addAnimationEffect();
@@ -120,17 +95,17 @@ function MapTemplate() {
     return () => {
       removeAnimationEffect();
     };
-  }, [addAnimationEffect, removeAnimationEffect, windowAnimationEffect]);
+  });
 
   return (
     <Section ref={reference}>
       {toggleModal && <Modal city={city} office={office} modalButtonOnClick={handleModalButton} />}
       <Wrapper>
-        <TextWrapper isVisibility={isVisibility}>
+        <TextWrapper elementVisibility={mapIsVisibility}>
           <MapText main cityButtonOnClick={handleSectionButton} />
           <MapText cityButtonOnClick={handleOfficeButton} />
         </TextWrapper>
-        <MapImage isVisibility={isVisibility} />
+        <MapImage />
       </Wrapper>
     </Section>
   );

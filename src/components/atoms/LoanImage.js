@@ -7,8 +7,8 @@ const LoanImage = styled.img`
   margin: 0 auto;
   width: 90%;
 
-  ${({ isVisibility }) =>
-    isVisibility &&
+  ${({ elementVisibility }) =>
+    elementVisibility &&
     css`
       visibility: visible;
       animation: ${loanImageAnimation} 1s ease 0.5s backwards;

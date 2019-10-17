@@ -1,7 +1,8 @@
-import React, { useState, useEffect, createRef, useCallback } from 'react';
+import React, { useEffect, createRef, useContext } from 'react';
 import styled from 'styled-components';
 import { colorWithOpacity, orange } from 'styled/colors';
 import Loan from 'components/molecules/Loan';
+import AppContext from 'context';
 
 const Section = styled.section`
   text-align: center;
@@ -11,46 +12,18 @@ const Section = styled.section`
 const reference = createRef();
 
 function LoanTemplate() {
-  const [isVisibility, setIsVisibility] = useState(false);
-  const [animation, setAnimation] = useState(true);
+  const {
+    handleSetLoanIsVisibility,
+    addAnimation,
+    handleRemoveEventListener,
+    handleAddEventListener,
+    handleWindowSizeAnimation,
+  } = useContext(AppContext);
 
-  const elementInViewport = (element, number) => {
-    const top = element.offsetTop;
-    return top * number < window.pageYOffset + window.innerHeight;
-  };
-
-  const addAnimation = () => {
-    const section = reference.current;
-
-    if (elementInViewport(section, 1.3)) {
-      setIsVisibility(true);
-    }
-  };
-
-  const handleAddAnimation = () => {
-    if (animation) {
-      window.addEventListener('scroll', addAnimation);
-      window.addEventListener('resize', addAnimation);
-      window.addEventListener('load', addAnimation);
-    }
-  };
-
-  const handleRemoveAnimation = () => {
-    setAnimation(false);
-    window.removeEventListener('scroll', addAnimation);
-    window.removeEventListener('resize', addAnimation);
-    window.removeEventListener('load', addAnimation);
-  };
-
-  const handleWindowSizeAnimation = () => {
-    if (window.innerHeight > window.outerHeight) {
-      addAnimation();
-    }
-  };
-
-  const addAnimationEffect = useCallback(handleAddAnimation, [animation]);
-  const removeAnimationEffect = useCallback(handleRemoveAnimation, [animation]);
-  const windowAnimationEffect = useCallback(handleWindowSizeAnimation);
+  const handleLoanAnimation = () => addAnimation(reference, 1.5, handleSetLoanIsVisibility);
+  const addAnimationEffect = () => handleAddEventListener(handleLoanAnimation);
+  const removeAnimationEffect = () => handleRemoveEventListener(handleLoanAnimation);
+  const windowAnimationEffect = () => handleWindowSizeAnimation(handleLoanAnimation);
 
   useEffect(() => {
     addAnimationEffect();
@@ -59,11 +32,11 @@ function LoanTemplate() {
     return () => {
       removeAnimationEffect();
     };
-  }, [addAnimationEffect, removeAnimationEffect, windowAnimationEffect]);
+  });
 
   return (
     <Section ref={reference}>
-      <Loan isVisibility={isVisibility} />
+      <Loan />
     </Section>
   );
 }
