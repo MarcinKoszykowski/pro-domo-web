@@ -43,5 +43,17 @@
     "lint-staged": "^10.0.0-0",
     "prettier": "^1.18.2",
     "webpack-env": "^0.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --config .prettierrc --write",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
