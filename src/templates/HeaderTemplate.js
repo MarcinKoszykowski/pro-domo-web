@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { colorWithOpacity, grey, white } from 'styled/colors';
 import animations from 'styled/animations';
-import NavigationLogo from 'components/molecules/Navigation/NavigationLogo';
-import Navigation from 'components/organisms/Navigation';
+import Navigation from 'templates/NavigationTemplate';
 
 const { headerAnimation } = animations;
 const Header = styled.header`
@@ -19,25 +18,9 @@ const Header = styled.header`
   animation: ${headerAnimation} 1s ease 1s backwards;
 `;
 
-const Wrapper = styled.nav`
-  display: flex;
-  padding: 15px 10px 15px 15px;
-  justify-content: space-between;
-  align-items: center;
-  transition: margin 0.2s, width 0.2s;
-
-  @media screen and (min-width: 1600px) {
-    margin: 0 auto;
-    width: 1575px;
-  }
-`;
-
 const HeaderTemplate = () => (
   <Header>
-    <Wrapper>
-      <NavigationLogo />
-      <Navigation />
-    </Wrapper>
+    <Navigation />
   </Header>
 );
 

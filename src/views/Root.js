@@ -2,9 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyle from 'styled/GlobalStyle';
 import routes from 'data/routes';
-import ScrollButton from 'components/molecules/ScrollButton';
-import IE from 'components/molecules/IE';
-import Error from 'components/organisms/Error';
+import ScrollButton from 'components/ScrollButton/ScrollButton';
+import IE from 'components/IE/IE';
+import Error from 'components/Error/Error';
 import Footer from 'templates/FooterTemplate';
 import Widgets from 'templates/WidgetsTemplate';
 import Header from 'templates/HeaderTemplate';
@@ -22,7 +22,7 @@ function Root() {
   const { addEventListener, removeEventListener } = window;
 
   const [scrollButton, setScrollButton] = useState(false);
-  const [mapIsVisibility, setMapIsVisibility] = useState(false);
+  const [contactIsVisibility, setContactIsVisibility] = useState(false);
   const [loanIsVisibility, setLoanIsVisibility] = useState(false);
 
   const toggleScrollButton = () => {
@@ -53,7 +53,7 @@ function Root() {
     }
   };
 
-  const handleSetMapIsVisibility = bool => setMapIsVisibility(bool);
+  const handleSetContactIsVisibility = bool => setContactIsVisibility(bool);
   const handleSetLoanIsVisibility = bool => setLoanIsVisibility(bool);
 
   const handleAddEventListener = animationFunction => {
@@ -77,9 +77,9 @@ function Root() {
 
   const scrollButtonEffect = useCallback(handleEventListener, [scrollButton]);
   const contextElement = {
-    mapIsVisibility,
+    contactIsVisibility,
     loanIsVisibility,
-    handleSetMapIsVisibility,
+    handleSetContactIsVisibility,
     handleSetLoanIsVisibility,
     handleAddEventListener,
     handleRemoveEventListener,

@@ -1,10 +1,10 @@
 import React from 'react';
-import Title from 'components/atoms/Information/Title';
-import Text from 'components/atoms/Information/Text';
-import List from 'components/atoms/Information/List';
-import Section from 'components/atoms/Information/Section';
-import Wrapper from 'components/atoms/Information/Wrapper';
-import SubListWrapper from 'components/atoms/Information/SubListWrapper';
+import Title from 'components/Information/Title';
+import Text from 'components/Information/Text';
+import List from 'components/Information/List';
+import Section from 'components/Information/Section';
+import Wrapper from 'components/Information/Wrapper';
+import SubListWrapper from 'components/Information/SubListWrapper';
 
 const EQ = () => (
   <Section>

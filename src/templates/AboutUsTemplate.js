@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AboutUs from 'components/organisms/AboutUs';
+import AboutUs from 'components/AboutUs/AboutUs';
 
 const Section = styled.section`
   padding: 60px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { greySuperLight, orange } from 'styled/colors';
-import Footer from 'components/organisms/Footer';
+import Footer from 'components/Footer/Footer';
 
 const Section = styled.section`
   background-color: ${greySuperLight};

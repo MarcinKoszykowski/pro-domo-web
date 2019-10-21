@@ -1,7 +1,7 @@
 import React, { useEffect, createRef, useContext } from 'react';
 import styled from 'styled-components';
 import { colorWithOpacity, orange } from 'styled/colors';
-import Loan from 'components/molecules/Loan';
+import Loan from 'components/Loan/Loan';
 import AppContext from 'context';
 
 const Section = styled.section`

@@ -1,8 +1,8 @@
 import React from 'react';
 import faq from 'data/faq';
-import Faq from 'components/organisms/Faq';
+import FAQ from 'components/FAQ/FAQ';
 
 const FaqTemplate = () =>
-  faq.map(({ answer, question, key }) => <Faq key={key} answer={answer} question={question} />);
+  faq.map(({ answer, question, key }) => <FAQ key={key} answer={answer} question={question} />);
 
 export default FaqTemplate;
