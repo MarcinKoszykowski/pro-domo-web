@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import IconFAQ from 'assets/icons/question-circle.svg';
-import IconForm from 'assets/icons/clipboard-list.svg';
-import IconCareer from 'assets/icons/briefcase.svg';
+import iconFAQ from 'assets/icons/question-circle.svg';
+import iconForm from 'assets/icons/clipboard-list.svg';
+import iconCareer from 'assets/icons/briefcase.svg';
 import animations from 'styled/animations';
 import { grey } from 'styled/colors';
 
@@ -35,19 +35,19 @@ const Button = styled.button`
   ${({ faq }) =>
     faq &&
     css`
-      background: url(${IconFAQ}) no-repeat center;
+      background: url(${iconFAQ}) no-repeat center;
     `}
 
   ${({ contact }) =>
     contact &&
     css`
-      background: url(${IconForm}) no-repeat center;
+      background: url(${iconForm}) no-repeat center;
     `}
 
   ${({ career }) =>
     career &&
     css`
-      background: url(${IconCareer}) no-repeat center;
+      background: url(${iconCareer}) no-repeat center;
     `}
 `;
 

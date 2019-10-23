@@ -5,8 +5,10 @@ import Firm from 'components/Form/organisms/Firm';
 import Individual from 'components/Form/organisms/Individual';
 import { button } from 'data/form';
 import { blue, grey } from 'styled/colors';
-import { firm } from 'data/radio';
 import Button from 'components/Form/atoms/Button';
+import emailPHP from 'email/email.php';
+import axios from 'axios';
+import messageValue from 'data/email';
 
 const Wrapper = styled.form`
   margin: 20px auto 60px;
@@ -39,19 +41,22 @@ function Form({ type }) {
     message: '',
   });
 
-  const { type: firmType } = firm;
-
   const handleInputChange = e => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
+    const dataPHP = messageValue(data, type);
+
+    axios.post(emailPHP, dataPHP, {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    });
   };
 
   return (
     <Wrapper autoComplete="off" onSubmit={e => handleSubmit(e)}>
-      {type === firmType ? (
+      {type === 'firm' ? (
         <Firm data={data} inputChange={handleInputChange} />
       ) : (
         <Individual data={data} inputChange={handleInputChange} />
