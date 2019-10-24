@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import animations from 'styled/animations';
 import alt from 'data/alt';
 import logoImage from 'assets/images/logo.png';
-import Image from 'components/AboutUs/atoms/Image';
+import Image from '../atoms/Image';
 
 const { aboutUsLogoAnimation } = animations;
 const { logo } = alt;

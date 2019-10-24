@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { orange } from 'styled/colors';
-import Text from 'components/FAQ/atoms/Text';
+import Text from './Text';
 
 const Box = styled.button`
   content: '';

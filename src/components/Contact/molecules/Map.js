@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import AppContext from 'context';
 import alt from 'data/alt';
 import mapImage from 'assets/images/mapa-obszar-dzialania.png';
-import AppContext from 'context';
-import Image from 'components/Contact/atoms/Image';
+import Image from '../atoms/Image';
 
 const { map } = alt;
 

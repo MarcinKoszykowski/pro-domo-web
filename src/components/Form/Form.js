@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Firm from 'components/Form/organisms/Firm';
-import Individual from 'components/Form/organisms/Individual';
+import messageValue from 'data/email';
 import { button } from 'data/form';
 import { blue, grey } from 'styled/colors';
-import Button from 'components/Form/atoms/Button';
 import emailPHP from 'email/email.php';
-import axios from 'axios';
-import messageValue from 'data/email';
+import Button from './atoms/Button';
+import Firm from './organisms/Firm';
+import Individual from './organisms/Individual';
 
 const Wrapper = styled.form`
   margin: 20px auto 60px;

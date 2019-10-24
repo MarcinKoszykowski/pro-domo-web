@@ -1,6 +1,6 @@
 import React from 'react';
 import arrowTop from 'assets/icons/caret-up.svg';
-import Button from 'components/ScrollButton/atoms/Button';
+import Button from './atoms/Button';
 
 function ScrollButton() {
   const handleScrollButton = () => {

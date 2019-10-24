@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { address } from 'data/widgets';
-import Text from 'components/Widgets/atoms/Text';
+import Text from '../atoms/Text';
 
 const Wrapper = styled.div`
   margin: 20px auto;

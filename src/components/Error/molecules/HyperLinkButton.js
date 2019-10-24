@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import routes from 'data/routes';
 import error from 'data/error';
-import Button from 'components/Error/atoms/Button';
+import Button from '../atoms/Button';
 
 const { main } = routes;
 const { button } = error;

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Textarea from 'components/Form/atoms/Textarea';
-import Input from 'components/Form/atoms/Input';
-import Label from 'components/Form/atoms/Label';
-import Bar from 'components/Form/atoms/Bar';
+import Textarea from '../atoms/Textarea';
+import Input from '../atoms/Input';
+import Label from '../atoms/Label';
+import Bar from '../atoms/Bar';
 
 const Wrapper = styled.div`
   width: 100%;

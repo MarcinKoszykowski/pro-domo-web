@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Box from 'components/Radio/atoms/Box';
 import { greyDark, white } from 'styled/colors';
+import Box from './Box';
 
 const Input = styled.input`
   cursor: pointer;

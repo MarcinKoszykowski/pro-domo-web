@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { section, office } from 'data/contact';
 import { section as citiesSection, office as citiesOffice } from 'data/cities';
-import Title from 'components/Contact/atoms/Title';
-import Cities from 'components/Contact/molecules/Cities';
+import Title from '../atoms/Title';
+import Cities from '../molecules/Cities';
 
 const Wrapper = styled.div`
   position: relative;

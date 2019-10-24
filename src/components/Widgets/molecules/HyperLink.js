@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { white, orange, blue } from 'styled/colors';
-import Text from 'components/Widgets/atoms/Text';
+import Text from '../atoms/Text';
 
 const StyledText = styled(Text)`
   color: ${white};

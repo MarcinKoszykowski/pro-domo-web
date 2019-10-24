@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import FirstColumn from 'components/Widgets/organisms/FirstColumn';
-import SecondColumn from 'components/Widgets/organisms/SecondColumn';
-import Address from 'components/Widgets/molecules/Address';
+import Address from './molecules/Address';
+import FirstColumn from './organisms/FirstColumn';
+import SecondColumn from './organisms/SecondColumn';
 
 const Wrapper = styled.div`
   display: grid;

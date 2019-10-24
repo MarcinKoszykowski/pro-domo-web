@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import AppContext from 'context';
 import alt from 'data/alt';
 import loanImage from 'assets/images/pozyczka.png';
-import Image from 'components/Loan/atoms/Image';
-import AppContext from 'context';
+import Image from './atoms/Image';
 
 const Wrapper = styled.div`
   padding: 30px;

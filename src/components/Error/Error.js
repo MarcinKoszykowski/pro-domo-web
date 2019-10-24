@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Text from 'components/Error/atoms/Text';
-import HyperLinkButton from 'components/Error/molecules/HyperLinkButton';
 import error from 'data/error';
+import Text from './atoms/Text';
+import HyperLinkButton from './molecules/HyperLinkButton';
 
 const Wrapper = styled.section`
   text-align: center;

@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Button from 'components/Navigation/atoms/Button';
+import PropTypes from 'prop-types';
+import Button from '../atoms/Button';
 
 const HyperLinkButton = ({ link, type }) => (
   <Link to={link}>

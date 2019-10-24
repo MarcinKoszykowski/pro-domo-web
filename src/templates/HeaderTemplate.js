@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { colorWithOpacity, grey, white } from 'styled/colors';
 import animations from 'styled/animations';
-import Navigation from 'templates/NavigationTemplate';
+import Navigation from './NavigationTemplate';
 
 const { headerAnimation } = animations;
 const Header = styled.header`

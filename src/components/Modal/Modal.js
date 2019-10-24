@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { white, colorWithOpacity, black } from 'styled/colors';
-import Button from 'components/Modal/atoms/Button';
-import Section from 'components/Modal/molecules/Section';
-import Office from 'components/Modal/molecules/Office';
+import Button from './atoms/Button';
+import Section from './molecules/Section';
+import Office from './molecules/Office';
 
 const Wrapper = styled.div`
   display: inline-flex;

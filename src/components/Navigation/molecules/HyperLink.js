@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import animations from 'styled/animations';
-import Text from 'components/Navigation/atoms/Text';
+import Text from '../atoms/Text';
 
 const { opacityZeroToOne } = animations;
 const Wrapper = styled.li`

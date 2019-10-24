@@ -1,5 +1,5 @@
 import React from 'react';
-import City from 'components/Contact/atoms/City';
+import City from '../atoms/City';
 
 function Cities({ cities, contact, cityButtonOnClick }) {
   const { key } = contact;

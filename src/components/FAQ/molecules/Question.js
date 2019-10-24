@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Box from 'components/FAQ/atoms/Box';
-import Button from 'components/FAQ/atoms/Button';
-import Text from 'components/FAQ/atoms/Text';
+import Box from '../atoms/Box';
+import Button from '../atoms/Button';
+import Text from '../atoms/Text';
 
 const Wrapper = styled.div`
   position: relative;

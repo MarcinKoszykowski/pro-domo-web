@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import aboutUs from 'data/aboutUs';
-import Title from 'components/AboutUs/atoms/Title';
-import Description from 'components/AboutUs/atoms/Description';
+import Title from '../atoms/Title';
+import Description from '../atoms/Description';
 
 const Wrapper = styled.div`
   position: relative;

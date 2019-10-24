@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createRef, useContext } from 'react';
 import styled from 'styled-components';
-import Modal from 'components/Modal/Modal';
 import AppContext from 'context';
+import Modal from 'components/Modal/Modal';
 import Contact from 'components/Contact/Contact';
 
 const Section = styled.section`

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { black } from 'styled/colors';
-import Answer from 'components/FAQ/molecules/Answer';
-import Question from 'components/FAQ/molecules/Question';
+import Answer from './molecules/Answer';
+import Question from './molecules/Question';
 
 const Wrapper = styled.div`
   color: ${black};

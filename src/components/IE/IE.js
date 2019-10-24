@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { orangeDark } from 'styled/colors';
 import ie from 'data/ie';
-import Text from 'components/IE/atoms/Text';
+import Text from './atoms/Text';
 
 const Wrapper = styled.section`
   position: fixed;

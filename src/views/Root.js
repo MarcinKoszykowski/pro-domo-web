@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import AppContext from 'context';
 import GlobalStyle from 'styled/GlobalStyle';
 import routes from 'data/routes';
 import ScrollButton from 'components/ScrollButton/ScrollButton';
@@ -8,14 +9,7 @@ import Error from 'components/Error/Error';
 import Footer from 'templates/FooterTemplate';
 import Widgets from 'templates/WidgetsTemplate';
 import Header from 'templates/HeaderTemplate';
-import Form from 'views/Form';
-import EQ from 'views/EQ';
-import PD from 'views/PD';
-import PDF from 'views/PDF';
-import PP from 'views/PP';
-import Main from 'views/Main';
-import FAQ from 'views/FAQ';
-import AppContext from 'context';
+import { Main, Form, PD, PDF, EQ, PP, FAQ } from './exportViews';
 
 function Root() {
   const isInternetExplorer = false || !!document.documentMode;

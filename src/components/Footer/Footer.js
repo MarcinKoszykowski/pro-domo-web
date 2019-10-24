@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import footer from 'data/footer';
-import Text from 'components/Footer/atoms/Text';
-import HyperLink from 'components/Footer/molecules/HyperLink';
+import Text from './atoms/Text';
+import HyperLink from './molecules/HyperLink';
 
 const Wrapper = styled.div`
   display: grid;

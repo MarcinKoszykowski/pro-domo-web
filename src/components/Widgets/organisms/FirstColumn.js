@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { link } from 'data/widgets';
 import routes from 'data/routes';
-import HyperLink from 'components/Widgets/molecules/HyperLink';
+import HyperLink from '../molecules/HyperLink';
 
 const Wrapper = styled.div`
   margin: 20px auto;

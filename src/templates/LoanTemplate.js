@@ -1,8 +1,8 @@
 import React, { useEffect, createRef, useContext } from 'react';
+import AppContext from 'context';
 import styled from 'styled-components';
 import { colorWithOpacity, orange } from 'styled/colors';
 import Loan from 'components/Loan/Loan';
-import AppContext from 'context';
 
 const Section = styled.section`
   text-align: center;

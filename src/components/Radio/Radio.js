@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Label from 'components/Radio/atoms/Lable';
-import Input from 'components/Radio/atoms/Input';
-import Box from 'components/Radio/atoms/Box';
+import Label from './atoms/Lable';
+import Input from './atoms/Input';
+import Box from './atoms/Box';
 
 const Radio = ({ id, checked, onChange, children }) => (
   <Label>

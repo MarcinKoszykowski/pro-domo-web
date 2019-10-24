@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FormInput from 'components/Form/molecules/FormInput';
 import {
   name as nameForm,
   firm as firmForm,
@@ -11,6 +10,7 @@ import {
   postCode as postCodeForm,
   message as messageForm,
 } from 'data/form';
+import FormInput from '../molecules/FormInput';
 
 function Firm({ data, inputChange }) {
   const { name, firm, nip, email, tel, city, postCode, message } = data;

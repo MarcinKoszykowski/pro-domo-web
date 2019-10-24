@@ -2,7 +2,7 @@ import React from 'react';
 import logoImage from 'assets/images/logo.png';
 import alt from 'data/alt';
 import routes from 'data/routes';
-import Image from 'components/Navigation/atoms/Image';
+import Image from '../atoms/Image';
 
 const { main } = routes;
 const { logo } = alt;

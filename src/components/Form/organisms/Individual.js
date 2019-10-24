@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FormInput from 'components/Form/molecules/FormInput';
 import {
   name as nameForm,
   email as emailForm,
@@ -9,6 +8,7 @@ import {
   postCode as postCodeForm,
   message as messageForm,
 } from 'data/form';
+import FormInput from '../molecules/FormInput';
 
 function Individual({ data, inputChange }) {
   const { name, email, tel, city, postCode, message } = data;

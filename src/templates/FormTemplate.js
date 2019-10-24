@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Title from 'components/Form/atoms/Title';
 import { title } from 'data/form';
 import { individual } from 'data/radio';
-import Radio from 'templates/RadioTemplate';
+import Title from 'components/Form/atoms/Title';
 import Form from 'components/Form/Form';
+import Radio from './RadioTemplate';
 
 const Wrapper = styled.div`
   display: flex;

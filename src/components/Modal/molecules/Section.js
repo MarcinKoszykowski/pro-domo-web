@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import phone from 'data/phone';
-import Text from 'components/Modal/atoms/Text';
-import Phone from 'components/Modal/atoms/Phone';
+import Text from '../atoms/Text';
+import Phone from '../atoms/Phone';
 
 const Wrapper = styled.div`
   text-align: center;

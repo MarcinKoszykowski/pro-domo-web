@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { orange, grey } from 'styled/colors';
-import Bar from 'components/Form/atoms/Bar';
-import Label from 'components/Form/atoms/Label';
+import Bar from './Bar';
+import Label from './Label';
 
 const Textarea = styled.textarea`
   color: ${grey};

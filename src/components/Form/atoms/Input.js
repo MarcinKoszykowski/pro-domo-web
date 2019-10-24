@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { grey, orange } from 'styled/colors';
-import Bar from 'components/Form/atoms/Bar';
-import Label from 'components/Form/atoms/Label';
+import Bar from './Bar';
+import Label from './Label';
 
 const Input = styled.input`
   color: ${grey};
