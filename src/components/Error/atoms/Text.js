@@ -8,6 +8,19 @@ const Text = styled.p`
   margin: 0 20px;
   transition: font 0.2s, margin 0.2s;
 
+  @media screen and (min-width: 1800px) {
+    font-size: 2.2rem;
+  }
+  @media screen and (max-width: 840px) {
+    font-size: 1.7rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.2rem;
+  }
+
   ${({ error }) =>
     error &&
     css`
@@ -31,19 +44,6 @@ const Text = styled.p`
         font-size: 2.8rem;
       }
     `}
-
-  @media screen and (min-width: 1800px) {
-    font-size: 2.2rem;
-  }
-  @media screen and (max-width: 840px) {
-    font-size: 1.7rem;
-  }
-  @media screen and (max-width: 600px) {
-    font-size: 1.4rem;
-  }
-  @media screen and (max-width: 500px) {
-    font-size: 1.2rem;
-  }
 `;
 
 export default Text;

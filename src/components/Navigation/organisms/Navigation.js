@@ -3,14 +3,11 @@ import { text } from 'data/header';
 import routes from 'data/routes';
 import HyperLink from '../molecules/HyperLink';
 
-const { form, faq, career } = routes;
-const { form: formText, faq: faqText, career: careerText } = text;
-
 const Navigation = () => (
   <>
-    <HyperLink link={form}>{formText}</HyperLink>
-    <HyperLink link={faq}>{faqText}</HyperLink>
-    <HyperLink link={career}>{careerText}</HyperLink>
+    <HyperLink link={routes.form}>{text.form}</HyperLink>
+    <HyperLink link={routes.faq}>{text.faq}</HyperLink>
+    <HyperLink link={routes.career}>{text.career}</HyperLink>
   </>
 );
 

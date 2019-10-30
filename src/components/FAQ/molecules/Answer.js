@@ -1,19 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import animations from 'styled/animations';
 import { orange } from 'styled/colors';
 
 const Wrapper = styled.div`
   cursor: auto;
   font-size: 0.95rem;
-  height: 100%;
   line-height: 1.5;
   padding: 15px 30px 10px 40px;
   text-align: justify;
   overflow: hidden;
   border-bottom: 1px solid ${orange};
-  animation: ${({ toggleBox }) => (toggleBox ? answerAnimationOn : answerAnimationOff)} 0.5s ease;
   transition: font-size 0.2s, padding 0.2s;
 
   @media screen and (max-width: 1000px) {
@@ -37,13 +34,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const { answerAnimationOn, answerAnimationOff } = animations;
-
-const Answer = ({ children, toggleBox }) => <Wrapper toggleBox={toggleBox}>{children}</Wrapper>;
+const Answer = ({ children }) => <Wrapper>{children}</Wrapper>;
 
 Answer.propTypes = {
   children: PropTypes.element.isRequired,
-  toggleBox: PropTypes.bool.isRequired,
 };
 
 export default Answer;

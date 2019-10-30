@@ -12,13 +12,11 @@ const Wrapper = styled.div`
   }
 `;
 
-const { title, address1, address2 } = address;
-
 const Address = () => (
   <Wrapper>
-    <Text>{title}</Text>
-    <Text>{address1}</Text>
-    <Text>{address2}</Text>
+    <Text>{address.title}</Text>
+    <Text>{address.address1}</Text>
+    <Text>{address.address2}</Text>
   </Wrapper>
 );
 

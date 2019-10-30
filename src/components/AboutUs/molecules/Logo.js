@@ -5,13 +5,10 @@ import alt from 'data/alt';
 import logoImage from 'assets/images/logo.png';
 import Image from '../atoms/Image';
 
-const { aboutUsLogoAnimation } = animations;
-const { logo } = alt;
-
 const Wrapper = styled.div`
   width: 200%;
   text-align: center;
-  animation: ${aboutUsLogoAnimation} 1s ease-out 0.5s backwards;
+  animation: ${animations.aboutUsLogoAnimation} 1s ease-out 0.5s backwards;
 
   @media screen and (min-width: 1800px) {
     width: 250%;
@@ -24,7 +21,7 @@ const Wrapper = styled.div`
 
 const Logo = () => (
   <Wrapper>
-    <Image alt={logo} src={logoImage} />
+    <Image alt={alt.logo} src={logoImage} />
   </Wrapper>
 );
 

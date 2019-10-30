@@ -1,17 +1,18 @@
 import styled, { css } from 'styled-components';
-import animations from 'styled/animations';
-
-const { cityImageAnimation } = animations;
 
 const Image = styled.img`
   visibility: hidden;
   width: 100%;
+  opacity: 0;
+  transform: translateX(300px);
+  transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
 
   ${({ elementVisibility }) =>
     elementVisibility &&
     css`
       visibility: visible;
-      animation: ${cityImageAnimation} 1s ease-out 0.5s backwards;
+      opacity: 1;
+      transform: translateX(0);
     `}
 `;
 

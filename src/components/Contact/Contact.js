@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import animations from 'styled/animations';
 import Map from './molecules/Map';
 import Text from './organisms/Text';
-
-const { cityTextAnimation } = animations;
 
 const Wrapper = styled.div`
   align-items: center;
@@ -30,22 +27,26 @@ const Wrapper = styled.div`
 `;
 
 const Box = styled.div`
-  width: 100%;
   visibility: hidden;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
 
   ${({ elementVisibility }) =>
     elementVisibility &&
     css`
       visibility: visible;
-      animation: ${cityTextAnimation} 1s ease-out 0.5s backwards;
+      opacity: 1;
+      transform: translateX(0);
     `}
 `;
 
-const Contact = ({ contactIsVisibility, handleSectionButton, handleOfficeButton }) => (
+const Contact = ({ contactIsVisibility, sectionButtonOnClick, officeButtonOnClick }) => (
   <Wrapper>
     <Box elementVisibility={contactIsVisibility}>
-      <Text main cityButtonOnClick={handleSectionButton} />
-      <Text cityButtonOnClick={handleOfficeButton} />
+      <Text main cityButtonOnClick={sectionButtonOnClick} />
+      <Text cityButtonOnClick={officeButtonOnClick} />
     </Box>
     <Map />
   </Wrapper>
@@ -53,8 +54,8 @@ const Contact = ({ contactIsVisibility, handleSectionButton, handleOfficeButton 
 
 Contact.propTypes = {
   contactIsVisibility: PropTypes.bool.isRequired,
-  handleSectionButton: PropTypes.func.isRequired,
-  handleOfficeButton: PropTypes.func.isRequired,
+  sectionButtonOnClick: PropTypes.func.isRequired,
+  officeButtonOnClick: PropTypes.func.isRequired,
 };
 
 export default Contact;

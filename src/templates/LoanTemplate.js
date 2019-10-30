@@ -1,28 +1,24 @@
-import React, { useEffect, createRef, useContext } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import AppContext from 'context';
 import styled from 'styled-components';
 import { colorWithOpacity, orange } from 'styled/colors';
 import Loan from 'components/Loan/Loan';
+import { addAnimationEventListener, removeAnimationEventListener } from 'helpers/functions';
+import { addAnimation } from '../helpers/functions';
 
 const Section = styled.section`
   text-align: center;
   background-color: ${colorWithOpacity(orange, 0.95)};
 `;
 
-const reference = createRef();
+const LoanTemplate = () => {
+  const reference = useRef(null);
 
-function LoanTemplate() {
-  const {
-    handleSetLoanIsVisibility,
-    addAnimation,
-    handleRemoveEventListener,
-    handleAddEventListener,
-    handleWindowSizeAnimation,
-  } = useContext(AppContext);
+  const { handleSetLoanIsVisibility, handleWindowSizeAnimation } = useContext(AppContext);
 
   const handleLoanAnimation = () => addAnimation(reference, 1.5, handleSetLoanIsVisibility);
-  const addAnimationEffect = () => handleAddEventListener(handleLoanAnimation);
-  const removeAnimationEffect = () => handleRemoveEventListener(handleLoanAnimation);
+  const addAnimationEffect = () => addAnimationEventListener(handleLoanAnimation);
+  const removeAnimationEffect = () => removeAnimationEventListener(handleLoanAnimation);
   const windowAnimationEffect = () => handleWindowSizeAnimation(handleLoanAnimation);
 
   useEffect(() => {
@@ -39,6 +35,6 @@ function LoanTemplate() {
       <Loan />
     </Section>
   );
-}
+};
 
 export default LoanTemplate;

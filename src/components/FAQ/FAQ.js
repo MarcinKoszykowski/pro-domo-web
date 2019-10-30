@@ -23,29 +23,21 @@ const Wrapper = styled.div`
   }
 `;
 
-function FAQ({ question, answer }) {
+const FAQ = ({ question, answer }) => {
   const [answerIsVisibility, setAnswerIsVisibility] = useState(false);
-  const [toggleBox, setTogglBox] = useState(false);
-
-  const handleBoxOnClick = () => {
-    if (answerIsVisibility) {
-      setTogglBox(false);
-      setTimeout(() => setAnswerIsVisibility(false), 350);
-    } else {
-      setAnswerIsVisibility(true);
-      setTogglBox(true);
-    }
-  };
 
   return (
     <Wrapper>
-      <Question toggleBox={toggleBox} boxOnClick={handleBoxOnClick}>
+      <Question
+        plus={answerIsVisibility}
+        boxOnClick={() => setAnswerIsVisibility(!answerIsVisibility)}
+      >
         {question}
       </Question>
-      {answerIsVisibility && <Answer toggleBox={toggleBox}>{answer}</Answer>}
+      {answerIsVisibility && <Answer>{answer}</Answer>}
     </Wrapper>
   );
-}
+};
 
 FAQ.propTypes = {
   question: PropTypes.string.isRequired,

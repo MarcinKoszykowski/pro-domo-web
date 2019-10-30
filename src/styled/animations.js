@@ -17,14 +17,6 @@ const animations = {
     90% {transform: translateY(-5px)}
     100% {transform: translateY(0)}
   `,
-  navigationLinkHoverAfterAnimation: keyframes`
-    0% {transform: translateX(-5px)}
-    100% {transform: translateX(0)}
-  `,
-  navigationLinkHoverBeforeAnimation: keyframes`
-    0% {transform: translateX(5px)}
-    100% {transform: translateX(0)}
-  `,
   headerAnimation: keyframes`
     0% {transform: translateY(-100px)}
     100% {transform: translateY(0)}
@@ -43,24 +35,8 @@ const animations = {
   `,
   loanImageAnimation: keyframes`
     0% {transform: translateY(250px); opacity: 0}
-    80% {transform: translateY(-30px)}
+    70% {transform: translateY(-30px)}
     100% {transform: translateY(0); opacity: 1}
-  `,
-  cityTextAnimation: keyframes`
-    0% {transform: translateX(-300px); opacity: 0}
-    100% {transform: translateX(0); opacity: 1}
-  `,
-  cityImageAnimation: keyframes`
-    0% {transform: translateX(300px); opacity: 0}
-    100% {transform: translateX(0); opacity: 1}
-  `,
-  answerAnimationOn: keyframes`
-    0% {transform: translateY(-40px); opacity: 0}
-    100% {transform: translateY(0); opacity: 1}
-  `,
-  answerAnimationOff: keyframes`
-    0% {transform: translateY(0); opacity: 1}
-    100% {transform: translateY(-40px); opacity: 0}
   `,
 };
 

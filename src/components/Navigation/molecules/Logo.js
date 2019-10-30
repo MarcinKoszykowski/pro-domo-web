@@ -4,12 +4,9 @@ import alt from 'data/alt';
 import routes from 'data/routes';
 import Image from '../atoms/Image';
 
-const { main } = routes;
-const { logo } = alt;
-
 const Logo = () => (
-  <a href={main}>
-    <Image src={logoImage} alt={logo} />
+  <a href={routes.main}>
+    <Image src={logoImage} alt={alt.logo} />
   </a>
 );
 

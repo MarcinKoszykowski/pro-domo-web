@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 import animations from 'styled/animations';
 
-const { loanImageAnimation } = animations;
-
 const Image = styled.img`
   visibility: hidden;
   margin: 0 auto;
@@ -12,7 +10,7 @@ const Image = styled.img`
     elementVisibility &&
     css`
       visibility: visible;
-      animation: ${loanImageAnimation} 1s ease 0.5s backwards;
+      animation: ${animations.loanImageAnimation} 1s ease 0.5s backwards;
     `}
 `;
 

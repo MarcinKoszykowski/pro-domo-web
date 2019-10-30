@@ -1,15 +1,13 @@
 import styled from 'styled-components';
 import animations from 'styled/animations';
 
-const { aboutUsTextAnimation } = animations;
-
 const Title = styled.h1`
   display: inline-box;
   font-size: 4rem;
   margin-bottom: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  animation: ${aboutUsTextAnimation} 1s ease-out 0.5s backwards;
+  animation: ${animations.aboutUsTextAnimation} 1s ease-out 0.5s backwards;
   transition: font-size 0.2s, margin 0.2s;
 
   @media screen and (min-width: 1800px) {

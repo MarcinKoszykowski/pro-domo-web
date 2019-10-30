@@ -20,12 +20,12 @@ const Button = styled.div`
   &:before {
     content: '';
     position: absolute;
-    top: ${({ toggleBox }) => (toggleBox ? '50%' : '0')};
+    top: ${({ plus }) => (plus ? '50%' : '0')};
     left: 50%;
     background-color: ${orange};
     border-radius: 3px;
     width: 25%;
-    height: ${({ toggleBox }) => (toggleBox ? '0' : '100%')};
+    height: ${({ plus }) => (plus ? '0' : '100%')};
     transform: translateX(-50%);
     transition: height 0.3s, top 0.3s;
   }

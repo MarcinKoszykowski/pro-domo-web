@@ -32,14 +32,16 @@ const Wrapper = styled.div`
   }
 `;
 
-const Modal = ({ office, city, modalButtonOnClick }) => (
-  <Wrapper office={office}>
-    {office ? <Office city={city} /> : <Section city={city} />}
-    <Button onClick={modalButtonOnClick} />
-  </Wrapper>
-);
+const Modal = ({ toggleModal, office, city, modalButtonOnClick }) =>
+  toggleModal && (
+    <Wrapper office={office}>
+      {office ? <Office city={city} /> : <Section city={city} />}
+      <Button onClick={modalButtonOnClick} />
+    </Wrapper>
+  );
 
 Modal.propTypes = {
+  toggleModal: PropTypes.bool.isRequired,
   city: PropTypes.string.isRequired,
   modalButtonOnClick: PropTypes.func.isRequired,
   office: PropTypes.bool.isRequired,

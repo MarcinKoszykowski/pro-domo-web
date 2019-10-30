@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import AppContext from 'context';
 import GlobalStyle from 'styled/GlobalStyle';
@@ -11,77 +11,26 @@ import Widgets from 'templates/WidgetsTemplate';
 import Header from 'templates/HeaderTemplate';
 import { Main, Form, PD, PDF, EQ, PP, FAQ } from './exportViews';
 
-function Root() {
-  const isInternetExplorer = false || !!document.documentMode;
-  const { addEventListener, removeEventListener } = window;
-
-  const [scrollButton, setScrollButton] = useState(false);
+const Root = () => {
   const [contactIsVisibility, setContactIsVisibility] = useState(false);
   const [loanIsVisibility, setLoanIsVisibility] = useState(false);
-
-  const toggleScrollButton = () => {
-    const { scrollY } = window;
-    if (scrollY > 400) {
-      setScrollButton(true);
-    } else {
-      setScrollButton(false);
-    }
-  };
-
-  const handleEventListener = () => {
-    addEventListener('scroll', toggleScrollButton);
-    addEventListener('load', toggleScrollButton);
-  };
-
-  const elementInViewport = (element, number) => {
-    const { pageYOffset, innerHeight } = window;
-    const { offsetTop } = element;
-    return offsetTop * number < pageYOffset + innerHeight;
-  };
-
-  const addAnimation = (valueReference, number, setVisibilityFunction) => {
-    const { current } = valueReference;
-
-    if (elementInViewport(current, number)) {
-      setVisibilityFunction(true);
-    }
-  };
 
   const handleSetContactIsVisibility = bool => setContactIsVisibility(bool);
   const handleSetLoanIsVisibility = bool => setLoanIsVisibility(bool);
 
-  const handleAddEventListener = animationFunction => {
-    addEventListener('scroll', animationFunction);
-    addEventListener('resize', animationFunction);
-    addEventListener('load', animationFunction);
-  };
-
-  const handleRemoveEventListener = animationFunction => {
-    removeEventListener('scroll', animationFunction);
-    removeEventListener('resize', animationFunction);
-    removeEventListener('load', animationFunction);
-  };
-
   const handleWindowSizeAnimation = animationFunction => {
-    const { innerHeight, outerHeight } = window;
-    if (innerHeight > outerHeight) {
+    if (window.innerHeight > window.outerHeight) {
       animationFunction();
     }
   };
 
-  const scrollButtonEffect = useCallback(handleEventListener, [scrollButton]);
   const contextElement = {
     contactIsVisibility,
     loanIsVisibility,
     handleSetContactIsVisibility,
     handleSetLoanIsVisibility,
-    handleAddEventListener,
-    handleRemoveEventListener,
-    addAnimation,
     handleWindowSizeAnimation,
   };
-
-  useEffect(() => scrollButtonEffect(), [scrollButtonEffect]);
 
   const { main, faq, form, pp, eq, pd, pdf } = routes;
   return (
@@ -101,11 +50,11 @@ function Root() {
         </Switch>
         <Widgets />
         <Footer />
-        {scrollButton && <ScrollButton />}
-        {isInternetExplorer && <IE />}
+        <ScrollButton />
+        <IE />
       </BrowserRouter>
     </AppContext.Provider>
   );
-}
+};
 
 export default Root;

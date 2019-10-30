@@ -35,10 +35,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const Question = ({ children, boxOnClick, toggleBox }) => (
+const Question = ({ children, boxOnClick, plus }) => (
   <Wrapper>
     <Box onClick={boxOnClick} />
-    <Button toggleBox={toggleBox} />
+    <Button plus={plus} />
     <Text>{children}</Text>
   </Wrapper>
 );
@@ -46,7 +46,7 @@ const Question = ({ children, boxOnClick, toggleBox }) => (
 Question.propTypes = {
   children: PropTypes.string.isRequired,
   boxOnClick: PropTypes.func.isRequired,
-  toggleBox: PropTypes.bool.isRequired,
+  plus: PropTypes.bool.isRequired,
 };
 
 export default Question;

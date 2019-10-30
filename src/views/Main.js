@@ -4,11 +4,11 @@ import Loan from 'templates/LoanTemplate';
 import Contact from 'templates/ContactTemplate';
 
 const Main = () => (
-  <section>
+  <>
     <AboutUs />
     <Loan />
     <Contact />
-  </section>
+  </>
 );
 
 export default Main;

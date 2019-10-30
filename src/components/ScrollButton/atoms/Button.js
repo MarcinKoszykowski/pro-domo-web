@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { orange } from 'styled/colors';
 import animations from 'styled/animations';
 
-const { scrollButton } = animations;
-
 const Button = styled.img`
   position: fixed;
   right: 20px;
@@ -14,7 +12,7 @@ const Button = styled.img`
   opacity: 0.6;
   border-radius: 5px;
   cursor: pointer;
-  animation: 0.3s ${scrollButton} ease-in;
+  animation: 0.3s ${animations.scrollButton} ease-in;
   transition: bottom 0.2s, right 0.2s, width 0.2s, height 0.2s, opacity 0.2s;
 
   &:hover {

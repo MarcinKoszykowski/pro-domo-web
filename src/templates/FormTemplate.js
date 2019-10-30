@@ -12,22 +12,20 @@ const Wrapper = styled.div`
   align-items: flex-start;
 `;
 
-function FormTemplate() {
-  const { type: individualType } = individual;
+const FormTemplate = () => {
+  const [type, setType] = useState(individual.type);
 
-  const [type, setType] = useState(individualType);
-
-  const handleRadioButtonChange = value => {
+  const handleRadioOnChange = value => {
     setType(value);
   };
 
   return (
     <Wrapper>
       <Title>{title}</Title>
-      <Radio radioButtonOnChange={handleRadioButtonChange} type={type} />
+      <Radio radioButtonOnChange={handleRadioOnChange} type={type} />
       <Form type={type} />
     </Wrapper>
   );
-}
+};
 
 export default FormTemplate;

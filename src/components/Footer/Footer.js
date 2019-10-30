@@ -21,11 +21,9 @@ const Wrapper = styled.div`
   }
 `;
 
-const { copyright } = footer;
-
 const Footer = () => (
   <Wrapper>
-    <Text>{copyright}</Text>
+    <Text>{footer.copyright}</Text>
     <HyperLink />
   </Wrapper>
 );

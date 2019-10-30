@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import { black, orange } from 'styled/colors';
-import animations from 'styled/animations';
-
-const { navigationLinkHoverAfterAnimation, navigationLinkHoverBeforeAnimation } = animations;
 
 const Text = styled.p`
   display: inline-block;
@@ -11,6 +8,7 @@ const Text = styled.p`
   color: ${black};
   border-top: 1px solid ${orange};
   border-bottom: 1px solid ${orange};
+  z-index: 1;
   position: relative;
 
   &:hover {
@@ -18,24 +16,29 @@ const Text = styled.p`
     border-top: none;
     border-bottom: none;
 
-    &::after {
-      animation: ${navigationLinkHoverAfterAnimation} 0.2s ease-in;
-      border-left: 0.1px solid ${black};
-    }
     &::before {
-      animation: ${navigationLinkHoverBeforeAnimation} 0.2s ease-in;
+      transform: translateX(5px);
+      border-left: 1px solid ${black};
+    }
+    &::after {
+      transform: translateX(-5px);
       border-right: 1px solid ${black};
     }
   }
-  &::after,
-  &::before {
+  &::before,
+  &::after {
     content: '';
     display: inline-block;
     position: absolute;
-    width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    transition: transform 0.2s ease-in-out;
+  }
+  &::before {
+    left: -5px;
+  }
+  &::after {
+    right: -5px;
   }
   &:active::after {
     border-left: 1px solid ${orange};

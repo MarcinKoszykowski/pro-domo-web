@@ -23,30 +23,27 @@ const Button = styled.button`
     }
   }
 
-  &::before {
+  &::before,
+  ::after {
     content: '';
     position: absolute;
     border-radius: 2px;
+    background-color: ${orange};
+    transition: background-color 0.2s;
+  }
+  &::before {
     top: 15%;
     left: 50%;
     width: 10%;
     height: 70%;
     transform: translateX(-50%);
-    background-color: ${orange};
-    transition: background-color 0.2s;
   }
-
   &::after {
-    content: '';
-    position: absolute;
-    border-radius: 2px;
     top: 50%;
     left: 15%;
     height: 10%;
     width: 70%;
     transform: translateY(-50%);
-    background-color: ${orange};
-    transition: background-color 0.2s;
   }
 `;
 

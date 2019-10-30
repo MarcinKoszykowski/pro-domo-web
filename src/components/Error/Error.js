@@ -16,12 +16,10 @@ const Wrapper = styled.section`
   }
 `;
 
-const { number, info } = error;
-
 const Error = () => (
   <Wrapper>
-    <Text error>{number}</Text>
-    <Text>{info}</Text>
+    <Text error>{error.number}</Text>
+    <Text>{error.info}</Text>
     <HyperLinkButton />
   </Wrapper>
 );

@@ -3,14 +3,11 @@ import { type } from 'data/header';
 import routes from 'data/routes';
 import HyperLinkButton from '../molecules/HyperLinkButton';
 
-const { form, faq, career } = routes;
-const { form: formType, faq: faqType, career: careerType } = type;
-
 const NavigationButton = () => (
   <>
-    <HyperLinkButton type={formType} link={form} />
-    <HyperLinkButton type={faqType} link={faq} />
-    <HyperLinkButton type={careerType} link={career} />
+    <HyperLinkButton type={type.form} link={routes.form} />
+    <HyperLinkButton type={type.faq} link={routes.faq} />
+    <HyperLinkButton type={type.career} link={routes.career} />
   </>
 );
 

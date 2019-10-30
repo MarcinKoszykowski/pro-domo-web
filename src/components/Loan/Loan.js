@@ -22,15 +22,14 @@ const Wrapper = styled.div`
   }
 `;
 
-function Loan() {
+const Loan = () => {
   const { loanIsVisibility } = useContext(AppContext);
-  const { loan } = alt;
 
   return (
     <Wrapper>
-      <Image elementVisibility={loanIsVisibility} src={loanImage} alt={loan} />
+      <Image elementVisibility={loanIsVisibility} src={loanImage} alt={alt.loan} />
     </Wrapper>
   );
-}
+};
 
 export default Loan;

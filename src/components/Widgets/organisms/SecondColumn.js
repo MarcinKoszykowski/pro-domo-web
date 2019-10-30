@@ -13,15 +13,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const { pp, eq, pd, pdf } = link;
-const { pp: routePP, eq: routeEQ, pd: routePD, pdf: routePDF } = routes;
-
 const SecondColumn = () => (
   <Wrapper>
-    <HyperLink link={routePP}>{pp}</HyperLink>
-    <HyperLink link={routeEQ}>{eq}</HyperLink>
-    <HyperLink link={routePD}>{pd}</HyperLink>
-    <HyperLink link={routePDF}>{pdf}</HyperLink>
+    <HyperLink link={routes.pp}>{link.pp}</HyperLink>
+    <HyperLink link={routes.eq}>{link.eq}</HyperLink>
+    <HyperLink link={routes.pd}>{link.pd}</HyperLink>
+    <HyperLink link={routes.pdf}>{link.pdf}</HyperLink>
   </Wrapper>
 );
 

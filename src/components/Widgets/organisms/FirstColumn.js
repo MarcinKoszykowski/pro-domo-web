@@ -13,15 +13,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const { main, form, faq, career } = link;
-const { main: routeMain, form: routeForm, faq: routeFAQ, career: routeCareer } = routes;
-
 const FirstColumn = () => (
   <Wrapper>
-    <HyperLink link={routeMain}>{main}</HyperLink>
-    <HyperLink link={routeForm}>{form}</HyperLink>
-    <HyperLink link={routeFAQ}>{faq}</HyperLink>
-    <HyperLink link={routeCareer}>{career}</HyperLink>
+    <HyperLink link={routes.main}>{link.main}</HyperLink>
+    <HyperLink link={routes.form}>{link.form}</HyperLink>
+    <HyperLink link={routes.faq}>{link.faq}</HyperLink>
+    <HyperLink link={routes.career}>{link.career}</HyperLink>
   </Wrapper>
 );
 

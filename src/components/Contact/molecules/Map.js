@@ -5,12 +5,10 @@ import alt from 'data/alt';
 import mapImage from 'assets/images/mapa-obszar-dzialania.png';
 import Image from '../atoms/Image';
 
-const { map } = alt;
-
 const Wrapper = styled.div`
   text-align: center;
   margin: 20px;
-  transition: margin-left 0.2s, width 0.2s;
+  transition: margin 0.2s, width 0.2s;
 
   @media screen and (max-width: 850px) {
     width: 90%;
@@ -21,14 +19,14 @@ const Wrapper = styled.div`
   }
 `;
 
-function Map() {
+const Map = () => {
   const { contactIsVisibility } = useContext(AppContext);
 
   return (
     <Wrapper>
-      <Image elementVisibility={contactIsVisibility} src={mapImage} alt={map} />
+      <Image elementVisibility={contactIsVisibility} src={mapImage} alt={alt.map} />
     </Wrapper>
   );
-}
+};
 
 export default Map;

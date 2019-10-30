@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 import animations from 'styled/animations';
 
-const { aboutUsTextAnimation } = animations;
-
 const Description = styled.p`
   text-align: justify;
   font-size: 1.3rem;
   line-height: 1.5;
-  animation: ${aboutUsTextAnimation} 1.5s ease-out 0.5s backwards;
+  animation: ${animations.aboutUsTextAnimation} 1.5s ease-out 0.5s backwards;
   transition: font-size 0.2s;
 
   @media screen and (min-width: 1800px) {

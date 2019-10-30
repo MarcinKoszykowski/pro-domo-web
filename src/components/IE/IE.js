@@ -36,10 +36,16 @@ const Wrapper = styled.section`
   }
 `;
 
-const IE = () => (
-  <Wrapper>
-    <Text>{ie}</Text>
-  </Wrapper>
-);
+const IE = () => {
+  const isInternetExplorer = false || !!document.documentMode;
+
+  return (
+    isInternetExplorer && (
+      <Wrapper>
+        <Text>{ie}</Text>
+      </Wrapper>
+    )
+  );
+};
 
 export default IE;

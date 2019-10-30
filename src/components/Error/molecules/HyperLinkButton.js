@@ -4,12 +4,9 @@ import routes from 'data/routes';
 import error from 'data/error';
 import Button from '../atoms/Button';
 
-const { main } = routes;
-const { button } = error;
-
 const HyperLinkButton = () => (
-  <Link to={main}>
-    <Button>{button}</Button>
+  <Link to={routes.main}>
+    <Button>{error.button}</Button>
   </Link>
 );
 

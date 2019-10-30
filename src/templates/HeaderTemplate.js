@@ -4,7 +4,6 @@ import { colorWithOpacity, grey, white } from 'styled/colors';
 import animations from 'styled/animations';
 import Navigation from './NavigationTemplate';
 
-const { headerAnimation } = animations;
 const Header = styled.header`
   font-weight: 500;
   position: fixed;
@@ -15,7 +14,7 @@ const Header = styled.header`
   min-width: 290px;
   background-color: ${colorWithOpacity(white, 0.8)};
   box-shadow: 0 5px 5px -5px ${grey};
-  animation: ${headerAnimation} 1s ease 1s backwards;
+  animation: ${animations.headerAnimation} 1s ease 1s backwards;
 `;
 
 const HeaderTemplate = () => (

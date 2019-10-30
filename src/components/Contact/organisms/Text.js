@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function Text({ main, cityButtonOnClick }) {
+const Text = ({ main, cityButtonOnClick }) => {
   const contact = main ? section : office;
   const cities = main ? citiesSection : citiesOffice;
 
@@ -35,7 +35,7 @@ function Text({ main, cityButtonOnClick }) {
       <Cities cityButtonOnClick={cityButtonOnClick} cities={cities} contact={contact} />
     </Wrapper>
   );
-}
+};
 
 Text.propTypes = {
   cityButtonOnClick: PropTypes.func.isRequired,

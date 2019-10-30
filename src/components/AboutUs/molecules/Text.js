@@ -14,12 +14,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const { title, text } = aboutUs;
-
 const Text = () => (
   <Wrapper>
-    <Title>{title}</Title>
-    <Description>{text}</Description>
+    <Title>{aboutUs.title}</Title>
+    <Description>{aboutUs.text}</Description>
   </Wrapper>
 );
 

@@ -1,8 +1,10 @@
-import React, { useState, useEffect, createRef, useContext } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import styled from 'styled-components';
 import AppContext from 'context';
 import Modal from 'components/Modal/Modal';
 import Contact from 'components/Contact/Contact';
+import { addAnimationEventListener, removeAnimationEventListener } from 'helpers/functions';
+import { addAnimation } from '../helpers/functions';
 
 const Section = styled.section`
   position: relative;
@@ -14,40 +16,36 @@ const Section = styled.section`
   }
 `;
 
-const reference = createRef();
-
-function ContactTemplate() {
+const ContactTemplate = () => {
+  const reference = useRef(null);
   const [toggleModal, setToggleModal] = useState(false);
   const [office, setOffice] = useState(false);
   const [city, setCity] = useState('');
   const {
     contactIsVisibility,
     handleSetContactIsVisibility,
-    addAnimation,
-    handleRemoveEventListener,
-    handleAddEventListener,
     handleWindowSizeAnimation,
   } = useContext(AppContext);
 
-  const handleModalButton = () => {
+  const modalButtonOnClick = () => {
     setToggleModal(false);
   };
 
-  const handleOfficeButton = value => {
+  const officeButtonOnClick = value => {
     setToggleModal(true);
     setOffice(true);
     setCity(value);
   };
 
-  const handleSectionButton = value => {
+  const sectionButtonOnClick = value => {
     setToggleModal(true);
     setOffice(false);
     setCity(value);
   };
 
   const handleContactAnimation = () => addAnimation(reference, 1.4, handleSetContactIsVisibility);
-  const addAnimationEffect = () => handleAddEventListener(handleContactAnimation);
-  const removeAnimationEffect = () => handleRemoveEventListener(handleContactAnimation);
+  const addAnimationEffect = () => addAnimationEventListener(handleContactAnimation);
+  const removeAnimationEffect = () => removeAnimationEventListener(handleContactAnimation);
   const windowAnimationEffect = () => handleWindowSizeAnimation(handleContactAnimation);
 
   useEffect(() => {
@@ -61,14 +59,19 @@ function ContactTemplate() {
 
   return (
     <Section ref={reference}>
-      {toggleModal && <Modal city={city} office={office} modalButtonOnClick={handleModalButton} />}
+      <Modal
+        toggleModal={toggleModal}
+        city={city}
+        office={office}
+        modalButtonOnClick={modalButtonOnClick}
+      />
       <Contact
         contactIsVisibility={contactIsVisibility}
-        handleSectionButton={handleSectionButton}
-        handleOfficeButton={handleOfficeButton}
+        sectionButtonOnClick={sectionButtonOnClick}
+        officeButtonOnClick={officeButtonOnClick}
       />
     </Section>
   );
-}
+};
 
 export default ContactTemplate;
