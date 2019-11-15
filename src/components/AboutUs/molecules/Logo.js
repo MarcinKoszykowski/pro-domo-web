@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import animations from 'styled/animations';
-import alt from 'data/alt';
+import { logo } from 'data/alt';
 import logoImage from 'assets/images/logo.png';
 import Image from '../atoms/Image';
 
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 
 const Logo = () => (
   <Wrapper>
-    <Image alt={alt.logo} src={logoImage} />
+    <Image alt={logo} src={logoImage} />
   </Wrapper>
 );
 

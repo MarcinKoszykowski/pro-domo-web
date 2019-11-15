@@ -13,7 +13,7 @@ const Cities = ({ cities, contact, cityButtonOnClick }) => {
 Cities.propTypes = {
   cities: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   contact: PropTypes.shape({
-    key: PropTypes.bool.isRequired,
+    key: PropTypes.func.isRequired,
   }).isRequired,
   cityButtonOnClick: PropTypes.func.isRequired,
 };

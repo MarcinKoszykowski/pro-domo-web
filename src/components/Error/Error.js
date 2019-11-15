@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import error from 'data/error';
+import { number, info } from 'data/error';
 import Text from './atoms/Text';
 import HyperLinkButton from './molecules/HyperLinkButton';
 
@@ -18,8 +18,8 @@ const Wrapper = styled.section`
 
 const Error = () => (
   <Wrapper>
-    <Text error>{error.number}</Text>
-    <Text>{error.info}</Text>
+    <Text error>{number}</Text>
+    <Text>{info}</Text>
     <HyperLinkButton />
   </Wrapper>
 );

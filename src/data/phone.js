@@ -58,8 +58,6 @@ const phone = {
     city: 'Ciechanów',
     href: 'tel:+48502854866',
     phone: '502 854 866',
-    href_2: 'tel:+48504215012',
-    phone_2: '504 215 012',
   },
   Częstochowa: {
     city: 'Częstochowa',
@@ -83,8 +81,8 @@ const phone = {
   },
   Płock: {
     city: 'Płock',
-    href: 'tel:+48517371456',
-    phone: '517 371 456',
+    href: 'tel:+48508455172',
+    phone: '508 455 172',
   },
   Rypin: {
     city: 'Rypin',

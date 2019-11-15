@@ -1,12 +1,10 @@
-const routes = {
-  main: '/',
-  form: '/formularz-kontaktowy',
-  faq: '/pytania-i-odpowiedzi',
-  career: '/kariera',
-  eq: '/eques-creditum',
-  pd: '/pd',
-  pdf: '/pdf',
-  pp: '/polityka-prywatnosci',
-};
+const main = '/';
+const form = '/formularz-kontaktowy';
+const faq = '/pytania-i-odpowiedzi';
+const career = '/kariera';
+const eq = '/eques-creditum';
+const pd = '/pd';
+const pdf = '/pdf';
+const pp = '/polityka-prywatnosci';
 
-export default routes;
+export { main, form, faq, career, eq, pd, pdf, pp };

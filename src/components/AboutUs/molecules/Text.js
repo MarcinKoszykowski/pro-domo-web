@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import aboutUs from 'data/aboutUs';
+import { title, text } from 'data/aboutUs';
 import Title from '../atoms/Title';
 import Description from '../atoms/Description';
 
@@ -16,8 +16,8 @@ const Wrapper = styled.div`
 
 const Text = () => (
   <Wrapper>
-    <Title>{aboutUs.title}</Title>
-    <Description>{aboutUs.text}</Description>
+    <Title>{title}</Title>
+    <Description>{text}</Description>
   </Wrapper>
 );
 

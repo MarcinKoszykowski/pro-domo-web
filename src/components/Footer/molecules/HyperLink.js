@@ -1,9 +1,7 @@
 import React from 'react';
-import footer from 'data/footer';
+import { code, link, created } from 'data/footer';
 import Text from '../atoms/Text';
 import Link from '../atoms/Link';
-
-const { code, link, created } = footer;
 
 const HyperLink = () => (
   <Text>

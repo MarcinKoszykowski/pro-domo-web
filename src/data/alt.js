@@ -1,7 +1,5 @@
-const alt = {
-  logo: 'Logo Pro Domo',
-  loan: 'Jak wziąć pożyczkę',
-  map: 'Mapa - Obszar działania',
-};
+const logo = 'Logo Pro Domo';
+const loan = 'Jak wziąć pożyczkę';
+const map = 'Mapa - Obszar działania';
 
-export default alt;
+export { logo, loan, map };

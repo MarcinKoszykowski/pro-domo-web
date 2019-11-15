@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import AppContext from 'context';
-import alt from 'data/alt';
+import { map } from 'data/alt';
 import mapImage from 'assets/images/mapa-obszar-dzialania.png';
 import Image from '../atoms/Image';
 
@@ -24,7 +24,7 @@ const Map = () => {
 
   return (
     <Wrapper>
-      <Image elementVisibility={contactIsVisibility} src={mapImage} alt={alt.map} />
+      <Image elementVisibility={contactIsVisibility} src={mapImage} alt={map} />
     </Wrapper>
   );
 };

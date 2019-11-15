@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import footer from 'data/footer';
+import { copyright } from 'data/footer';
 import Text from './atoms/Text';
 import HyperLink from './molecules/HyperLink';
 
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 
 const Footer = () => (
   <Wrapper>
-    <Text>{footer.copyright}</Text>
+    <Text>{copyright}</Text>
     <HyperLink />
   </Wrapper>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { link } from 'data/widgets';
-import routes from 'data/routes';
+import { main, form, faq, career } from 'data/routes';
 import HyperLink from '../molecules/HyperLink';
 
 const Wrapper = styled.div`
@@ -15,10 +15,10 @@ const Wrapper = styled.div`
 
 const FirstColumn = () => (
   <Wrapper>
-    <HyperLink link={routes.main}>{link.main}</HyperLink>
-    <HyperLink link={routes.form}>{link.form}</HyperLink>
-    <HyperLink link={routes.faq}>{link.faq}</HyperLink>
-    <HyperLink link={routes.career}>{link.career}</HyperLink>
+    <HyperLink link={main}>{link.main}</HyperLink>
+    <HyperLink link={form}>{link.form}</HyperLink>
+    <HyperLink link={faq}>{link.faq}</HyperLink>
+    <HyperLink link={career}>{link.career}</HyperLink>
   </Wrapper>
 );
 

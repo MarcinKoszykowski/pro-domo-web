@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { link } from 'data/widgets';
-import routes from 'data/routes';
+import { pp, eq, pd, pdf } from 'data/routes';
 import HyperLink from '../molecules/HyperLink';
 
 const Wrapper = styled.div`
@@ -15,10 +15,10 @@ const Wrapper = styled.div`
 
 const SecondColumn = () => (
   <Wrapper>
-    <HyperLink link={routes.pp}>{link.pp}</HyperLink>
-    <HyperLink link={routes.eq}>{link.eq}</HyperLink>
-    <HyperLink link={routes.pd}>{link.pd}</HyperLink>
-    <HyperLink link={routes.pdf}>{link.pdf}</HyperLink>
+    <HyperLink link={pp}>{link.pp}</HyperLink>
+    <HyperLink link={eq}>{link.eq}</HyperLink>
+    <HyperLink link={pd}>{link.pd}</HyperLink>
+    <HyperLink link={pdf}>{link.pdf}</HyperLink>
   </Wrapper>
 );
 

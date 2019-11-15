@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import AppContext from 'context';
-import alt from 'data/alt';
+import { loan } from 'data/alt';
 import loanImage from 'assets/images/pozyczka.png';
 import Image from './atoms/Image';
 
@@ -27,7 +27,7 @@ const Loan = () => {
 
   return (
     <Wrapper>
-      <Image elementVisibility={loanIsVisibility} src={loanImage} alt={alt.loan} />
+      <Image elementVisibility={loanIsVisibility} src={loanImage} alt={loan} />
     </Wrapper>
   );
 };

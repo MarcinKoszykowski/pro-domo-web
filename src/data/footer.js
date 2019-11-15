@@ -1,10 +1,8 @@
 const year = new Date().getFullYear();
 
-const footer = {
-  copyright: `Copyright © ${year} | Pro Domo Sp. z o.o.`,
-  created: 'Created by Marcin Koszykowski | ',
-  link: 'http://code-mk.com/',
-  code: 'CODE-MK',
-};
+const copyright = `Copyright © ${year} | Pro Domo Sp. z o.o.`;
+const created = 'Created by Marcin Koszykowski | ';
+const link = 'http://code-mk.com/';
+const code = 'CODE-MK';
 
-export default footer;
+export { copyright, created, link, code };
