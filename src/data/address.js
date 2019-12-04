@@ -10,8 +10,10 @@ const address = {
   Grudziądz: {
     address_1: 'ul. Józefa Wybickiego 9',
     address_2: '86-302 Grudziądz',
-    href: 'tel:+48508456445',
-    phone: '508 456 445',
+    href: 'tel:+48506558456',
+    phone: '506 558 456',
+    href_2: 'tel:+48786866062',
+    phone_2: '786 866 062',
   },
   'Starogard Gdański': {
     address_1: 'ul. Chojnicka 9',
@@ -24,20 +26,34 @@ const address = {
   Konin: {
     address_1: 'Aleja 1-ego Maja 3/1',
     address_2: '62-500 Konin',
-    href: 'tel:+48501944684',
-    phone: '501 944 684',
+    href: 'tel:+48504160956',
+    phone: '504 160 956',
+    href_2: 'tel:+48506476556',
+    phone_2: '506 476 556',
   },
   Inowrocław: {
     address_1: 'Aleja Niepodległości 18D',
     address_2: '88-100 Inowrocław',
-    href: 'tel:+48501944688',
-    phone: '501 944 688',
+    href: 'tel:+48504160920',
+    phone: '504 160 920',
+    href_2: 'tel:+48517370176',
+    phone_2: '517 370 176',
   },
   Sieradz: {
     address_1: 'Jana Pawła II 53',
     address_2: '98-200 Sieradz',
-    href: 'tel:+48786866092',
-    phone: '786 866 092',
+    href: 'tel:+48517371210',
+    phone: '517 371 210',
+    href_2: 'tel:+48517371657',
+    phone_2: '517 371 657',
+  },
+  Gniezno: {
+    address_1: '',
+    address_2: '',
+    href: 'tel:+48512848052',
+    phone: '512 848 052',
+    href_2: 'tel:+48786866075',
+    phone_2: '786 866 075',
   },
 };
 

@@ -17,15 +17,23 @@ const section = [
   'Piotrków Trybunalski',
   'Płock',
   'Rypin',
+  'Augustów',
   'Białystok',
   'Olsztyn',
-  'Olsztynek',
   'Ostrołęka',
   'Siedlce',
   'Suwałki',
   'Wyszków',
 ];
 
-const office = ['Włocławek', 'Grudziądz', 'Starogard Gdański', 'Konin', 'Inowrocław', 'Sieradz'];
+const office = [
+  'Włocławek',
+  'Grudziądz',
+  'Starogard Gdański',
+  'Konin',
+  'Inowrocław',
+  'Sieradz',
+  'Gniezno',
+];
 
 export { section, office };

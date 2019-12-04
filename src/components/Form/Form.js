@@ -29,7 +29,7 @@ const Wrapper = styled.form`
   }
 `;
 
-function Form({ type }) {
+function Form({ type, setError, setIsVisibility }) {
   const [data, setData] = useState({
     name: '',
     firm: '',
@@ -49,9 +49,25 @@ function Form({ type }) {
     e.preventDefault();
     const dataPHP = messageValue(data, type);
 
-    axios.post(emailPHP, dataPHP, {
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    });
+    axios
+      .post(emailPHP, dataPHP, {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      })
+      .then(response => {
+        if (response.status === 200 && response.statusText === 'OK') {
+          setError(false);
+          setIsVisibility(true);
+          setTimeout(() => {
+            setIsVisibility(false);
+          }, 2000);
+        } else {
+          setError(true);
+          setIsVisibility(true);
+          setTimeout(() => {
+            setIsVisibility(false);
+          }, 2000);
+        }
+      });
   };
 
   return (
@@ -70,6 +86,8 @@ function Form({ type }) {
 
 Form.propTypes = {
   type: PropTypes.string.isRequired,
+  setIsVisibility: PropTypes.func.isRequired,
+  setError: PropTypes.func.isRequired,
 };
 
 export default Form;

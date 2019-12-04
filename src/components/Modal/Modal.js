@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   opacity: 0.95;
   background-color: ${white};
   box-shadow: 0 0 5px 1px ${colorWithOpacity(black, 0.5)};
-  transition: top 0.2s, right 0.2s, padding 0.2s, opacity 0.5s ease, transform 0.5s;
+  transition: top 0.2s, right 0.2s, padding 0.2s, opacity 0.5s ease;
 
   @media screen and (max-width: 600px) {
     padding: 0 30px;
