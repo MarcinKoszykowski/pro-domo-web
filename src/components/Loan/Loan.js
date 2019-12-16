@@ -8,7 +8,7 @@ import Image from './atoms/Image';
 const Wrapper = styled.div`
   padding: 30px;
   display: block;
-  transition: width 0.2s, margin 0.2s, padding 0.2s;
+  transition-property: width, margin, padding;
 
   @media screen and (min-width: 1600px) {
     width: 1540px;

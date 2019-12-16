@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { greyDark, white } from 'styled/colors';
+import { grey_dark, white } from 'styled/colors';
 import Box from './Box';
 
 const Input = styled.input`
@@ -9,7 +9,7 @@ const Input = styled.input`
 
   &:checked + ${Box} {
     cursor: pointer;
-    background-color: ${greyDark};
+    background-color: ${grey_dark};
     box-shadow: inset 0 0 0 2px ${white};
   }
 `;

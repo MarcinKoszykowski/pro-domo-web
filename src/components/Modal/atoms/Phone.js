@@ -5,7 +5,7 @@ const Phone = styled.a`
   margin-bottom: 5px;
   font-size: 1.2rem;
   font-weight: 500;
-  transition: font-size 0.2s;
+  transition-property: font;
 
   @media screen and (min-width: 1800px) {
     font-size: 1.3rem;
@@ -19,12 +19,13 @@ const Phone = styled.a`
     css`
       display: inline-block;
       margin: 0 15px;
-      transition: font-size 0.2s, margin 0.2s;
+      transition-property: font, margin;
+
       @media screen and (max-width: 600px) {
         margin: 0 10px;
       }
     `}
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     font-size: 1rem;
   }
 `;

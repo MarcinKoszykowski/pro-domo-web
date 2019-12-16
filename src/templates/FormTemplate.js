@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 
 const FormTemplate = () => {
   const [type, setType] = useState(individual.type);
-  const [isVisibility, setIsVisibility] = useState(false);
+  const [isVisibility, setIsVisibility] = useState(true);
   const [error, setError] = useState(false);
 
   const handleRadioOnChange = value => {

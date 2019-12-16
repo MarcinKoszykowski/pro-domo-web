@@ -8,7 +8,7 @@ const Title = styled.h1`
   letter-spacing: 2px;
   text-transform: uppercase;
   animation: ${animations.aboutUsTextAnimation} 1s ease-out 0.5s backwards;
-  transition: font-size 0.2s, margin 0.2s;
+  transition-property: font-size, margin;
 
   @media screen and (min-width: 1800px) {
     font-size: 4.4rem;

@@ -18,7 +18,7 @@ const Wrapper = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  transition: max-width 0.2s, margin 0.2s;
+  transition-property: max-width, margin;
 
   @media screen and (max-width: 950px) {
     margin: 20px auto 40px;

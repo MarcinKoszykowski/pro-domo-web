@@ -17,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
         vertical-align: baseline;
         text-decoration: none;
         list-style: none;
+        transition-timing-function: ease;
+        transition-duration: .3s;
     }
 
     body {
@@ -33,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         color: ${orange};
-        transition: color 0.3s ease;
+        transition-property: color;
 
         &:hover {color: ${blue}}
     }

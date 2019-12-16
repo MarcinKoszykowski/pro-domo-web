@@ -4,7 +4,7 @@ const List = styled.li`
   font-weight: 700;
   list-style: decimal;
   margin-bottom: 10px;
-  transition: font-size 0.2s;
+  transition-property: font;
 
   ${({ roman }) =>
     roman &&

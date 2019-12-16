@@ -7,6 +7,7 @@ import Phone from '../atoms/Phone';
 
 const Wrapper = styled.div`
   text-align: center;
+  margin: 0 auto;
 `;
 
 const Section = ({ city }) => (

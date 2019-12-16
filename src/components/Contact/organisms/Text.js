@@ -9,7 +9,7 @@ import Cities from '../molecules/Cities';
 const Wrapper = styled.div`
   position: relative;
   margin: 40px 0;
-  transition: margin 0.2s;
+  transition-property: margin;
 
   @media screen and (max-width: 1350px) {
     margin: 35px 0;

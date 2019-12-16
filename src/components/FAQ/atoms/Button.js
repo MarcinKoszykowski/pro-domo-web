@@ -6,7 +6,7 @@ const Button = styled.div`
   background-color: ${white};
   height: 30px;
   width: 30px;
-  transition: height 0.2s, width 0.2s;
+  transition-property: height, width;
 
   @media screen and (max-width: 850px) {
     height: 25px;
@@ -27,7 +27,7 @@ const Button = styled.div`
     width: 25%;
     height: ${({ plus }) => (plus ? '0' : '100%')};
     transform: translateX(-50%);
-    transition: height 0.3s, top 0.3s;
+    transition-property: height, top;
   }
 
   &:after {
@@ -40,7 +40,7 @@ const Button = styled.div`
     width: 100%;
     height: 25%;
     transform: translateY(-50%);
-    transition: height 0.3s, top 0.3s;
+    transition-property: height, top;
   }
 `;
 

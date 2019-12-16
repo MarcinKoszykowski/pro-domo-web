@@ -5,10 +5,10 @@ import FirstColumn from './organisms/FirstColumn';
 import SecondColumn from './organisms/SecondColumn';
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   padding: 0 30px;
-  transition: margin 0.2s, width 0.2s, padding 0.2s;
+  transition-property: margin, width, padding;
 
   @media screen and (min-width: 1600px) {
     margin: 0 auto;
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     padding: 0 10px;
   }
   @media screen and (max-width: 700px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     padding: 5px 10px;
   }
 `;

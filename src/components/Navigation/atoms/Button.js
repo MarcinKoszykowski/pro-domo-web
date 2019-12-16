@@ -12,7 +12,7 @@ const Button = styled.button`
   height: 40px;
   background-color: ${grey};
   animation: ${animations.menuIconAnimation} 1.5s ease 0.5s backwards;
-  transition: margin 0.2s, width 0.2s, height 0.2s, display 0.5s;
+  transition-property: margin, width, height;
 
   &:hover {
     transform: translateY(-1px);

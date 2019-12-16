@@ -12,7 +12,7 @@ const Button = styled.button`
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: padding 0.2s, margin 0.2s, font 0.2s, color 0.2s, transform 0.2s, border 0.2s;
+  transition-property: padding, margin, font, color, transform, border;
 
   &:hover {
     transform: translateY(-3px);

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { greyLight } from 'styled/colors';
+import { grey_light } from 'styled/colors';
 
 const Text = styled.p`
-  color: ${greyLight};
+  color: ${grey_light};
   text-align: center;
   font-size: 0.9rem;
   margin: 8px 0;
   padding: 3px 0;
-  transition: font-size 0.2s, margin 0.2s;
+  transition-property: font, margin;
 
   @media screen and (min-width: 1800px) {
     font-size: 1rem;

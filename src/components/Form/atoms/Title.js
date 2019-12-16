@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import { greyDark } from 'styled/colors';
+import { grey_dark } from 'styled/colors';
 
 const Title = styled.h2`
   font-size: 2.2rem;
   font-weight: 500;
-  color: ${greyDark};
+  color: ${grey_dark};
   margin: 100px auto 20px;
   padding: 0 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
-  transition: font-size 0.2s, margin 0.2s, letter-spacing 0.2s;
+  transition-property: font, margin, letter-spacing;
 
   @media screen and (max-width: 950px) {
     font-size: 2rem;

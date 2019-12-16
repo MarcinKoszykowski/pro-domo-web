@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { greyDark } from 'styled/colors';
+import { grey_dark } from 'styled/colors';
 
 const Label = styled.label`
   position: relative;
@@ -9,8 +9,8 @@ const Label = styled.label`
   font-weight: 500;
   margin: 0 50px;
   font-size: 1.1rem;
-  color: ${greyDark};
-  transition: margin 0.2s, font-size 0.2s;
+  color: ${grey_dark};
+  transition-property: margin, font;
 
   @media screen and (max-width: 700px) {
     margin: 0 40px;

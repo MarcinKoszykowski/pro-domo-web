@@ -5,10 +5,12 @@ import Text from '../atoms/Text';
 
 const Wrapper = styled.div`
   margin: 20px auto;
-  transition: margin 0.2s;
+  width: 33%;
+  transition-property: margin;
 
   @media screen and (max-width: 700px) {
     margin: 10px auto;
+    width: 100%;
   }
 `;
 

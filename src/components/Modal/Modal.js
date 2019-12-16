@@ -10,25 +10,26 @@ const Wrapper = styled.div`
   display: inline-flex;
   position: absolute;
   margin: 0 auto;
-  width: max-content;
+  width: ${({ office }) => (office ? `330px` : `200px`)};
   top: 10%;
   bottom: 10%;
-  padding: 0 40px;
   border-radius: 15px;
   left: 0;
   right: 0;
   z-index: 2;
   align-items: center;
+  text-align: center;
   opacity: 0.95;
   background-color: ${white};
   box-shadow: 0 0 5px 1px ${colorWithOpacity(black, 0.5)};
-  transition: top 0.2s, right 0.2s, padding 0.2s, opacity 0.5s ease;
+  transition-property: top, right, opacity;
 
-  @media screen and (max-width: 600px) {
-    padding: 0 30px;
+  @media screen and (max-width: 700px) {
+    width: ${({ office }) => (office ? `280px` : `170px`)};
   }
-  @media screen and (max-width: 400px) {
-    padding: ${({ office }) => (office ? `0 15px` : null)};
+
+  @media screen and (max-width: 500px) {
+    width: ${({ office }) => (office ? `240px` : `140px`)};
   }
 `;
 

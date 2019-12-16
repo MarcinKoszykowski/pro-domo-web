@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   object-fit: contain;
   display: flex;
   align-items: center;
-  transition: font-size 0.2s;
+  transition-property: font;
 
   @media screen and (max-width: 1000px) {
     font-size: 1.05rem;

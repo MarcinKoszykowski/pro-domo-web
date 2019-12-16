@@ -12,7 +12,7 @@ const Wrapper = styled.li`
   text-transform: uppercase;
   margin: 0 7px;
   animation: ${animations.opacityZeroToOne} 0.5s ease 0.5s backwards;
-  transition: font-size 0.2s, margin 0.2s;
+  transition-property: font, margin;
 
   @media screen and (min-width: 1800px) {
     font-size: 1.3rem;

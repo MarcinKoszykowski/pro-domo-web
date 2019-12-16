@@ -8,7 +8,7 @@ import Text from '../atoms/Text';
 const StyledText = styled(Text)`
   color: ${white};
   cursor: pointer;
-  transition: transform 0.2s ease, font-size 0.2s, margin 0.2s;
+  transition-property: transform, font-size, margin;
 
   &:hover {
     color: ${orange};

@@ -12,7 +12,7 @@ const Button = styled.button`
   width: 25px;
   cursor: pointer;
   transform: rotate(45deg);
-  transition: border-color 0.2s, transform 0.2s, height 0.2s, width 0.2s, margin-right 0.2s;
+  transition-property: border, transform, height, width, margin;
 
   &:hover {
     transform: rotate(315deg);
@@ -29,7 +29,7 @@ const Button = styled.button`
     position: absolute;
     border-radius: 2px;
     background-color: ${orange};
-    transition: background-color 0.2s;
+    transition-property: background;
   }
   &::before {
     top: 15%;

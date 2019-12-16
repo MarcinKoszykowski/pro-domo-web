@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 import markerIcon from 'assets/icons/map-marker.svg';
-import { orangeDark } from 'styled/colors';
+import { orange_dark } from 'styled/colors';
 
-const City = styled.p`
+const City = styled.span`
   position: relative;
   display: inline-flex;
   font-size: 1.1rem;
   margin: 5px 35px 5px 5px;
   cursor: pointer;
-  transition: font-size 0.2s, margin 0.2s;
+  transition-property: font, margin;
 
   &:hover {
-    color: ${orangeDark};
+    color: ${orange_dark};
   }
 
   @media screen and (min-width: 1800px) {
@@ -33,26 +33,25 @@ const City = styled.p`
   }
 
   &::before {
-    content: url(${markerIcon});
+    content: '';
+    background: url(${markerIcon}) no-repeat center center;
+    background-size: contain;
     position: absolute;
     left: -55px;
-    top: -10px;
+    top: 0;
     height: 100%;
     width: 80px;
-    transform: scale(0.2);
-    transition: width 0.2s, left 0.2s, top 0.2s;
+    transition-property: width, left;
 
     @media screen and (max-width: 1350px) {
       width: 75px;
       left: -50px;
     }
     @media screen and (max-width: 1100px) {
-      top: -7.5px;
       width: 70px;
     }
     @media screen and (max-width: 850px) {
       width: 65px;
-      top: -6.25px;
       left: -45px;
     }
     @media screen and (max-width: 600px) {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colorWithOpacity, grey, textInformation } from 'styled/colors';
+import { colorWithOpacity, grey, text_information } from 'styled/colors';
 
 const Section = styled.section`
   font-family: 'Roboto', sans-serif;
@@ -9,7 +9,7 @@ const Section = styled.section`
   line-height: 1.4;
 
   & b::not(a) {
-    color: ${textInformation};
+    color: ${text_information};
   }
   @media screen and (max-width: 1350px) {
     padding: 60px 125px;

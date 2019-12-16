@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  transition: margin 0.2s, width 0.2s, padding 0.2s;
+  transition-property: padding;
 
   @media screen and (max-width: 1100px) {
     padding: 10px 25px 20px 70px;

@@ -6,7 +6,7 @@ const Bar = styled.div`
   height: 3px;
   margin-top: 1px;
   background: ${colorWithOpacity(orange, 0.6)};
-  transition: background-color 0.1s;
+  transition-property: background;
 `;
 
 export default Bar;

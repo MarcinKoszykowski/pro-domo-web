@@ -12,7 +12,7 @@ const Button = styled.button`
   font-size: 1.2rem;
   margin: 50px auto;
   padding: 10px 16px;
-  transition: padding 0.2s, margin 0.2s, font 0.2s, color 0.2s, transform 0.2s, border 0.2s;
+  transition-property: padding, margin, font, color, transform, border;
 
   &:hover {
     transform: translateY(-3px);

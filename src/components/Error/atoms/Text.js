@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
-import { greyDark, orange } from 'styled/colors';
+import { grey_dark, orange } from 'styled/colors';
 
 const Text = styled.p`
   font-weight: 500;
   font-size: 2rem;
-  color: ${greyDark};
+  color: ${grey_dark};
   margin: 0 20px;
-  transition: font 0.2s, margin 0.2s;
+  transition-property: font, margin;
 
   @media screen and (min-width: 1800px) {
     font-size: 2.2rem;

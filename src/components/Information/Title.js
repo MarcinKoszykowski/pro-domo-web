@@ -6,7 +6,7 @@ const Title = styled.h2`
   margin-bottom: 40px;
   text-align: center;
   line-height: 1.2;
-  transition: font-size 0.2s, margin 0.2s;
+  transition-property: font, margin;
 
   @media screen and (max-width: 1200px) {
     font-size: 1.1rem;

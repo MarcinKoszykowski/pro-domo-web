@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Text = styled.p`
   margin-bottom: 15px;
-  transition: font-size 0.2s, margin 0.2s;
+  transition-property: font, margin;
 
   @media screen and (max-width: 1000px) {
     font-size: 0.9rem;

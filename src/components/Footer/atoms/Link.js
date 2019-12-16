@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { blue, orangeDark } from 'styled/colors';
+import { blue, orange_dark } from 'styled/colors';
 
 const Link = styled.a`
   color: ${blue};
+  transition-property: color, padding, font;
 
   &:hover {
-    color: ${orangeDark};
+    color: ${orange_dark};
     text-decoration: none;
   }
 

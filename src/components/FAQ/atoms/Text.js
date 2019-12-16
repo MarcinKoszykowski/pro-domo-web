@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Text = styled.p`
   width: 100%;
   padding-left: 25px;
-  transition: color 0.2s ease, padding 0.2s;
+  transition-property: color, padding;
 
   @media screen and (max-width: 900px) {
     padding-left: 15px;

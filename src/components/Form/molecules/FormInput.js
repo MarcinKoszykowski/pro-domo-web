@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   margin: 24px 0;
   position: relative;
   flex-shrink: 0;
-  transition: font-size 0.2s;
+  transition-property: font;
 
   @media screen and (max-width: 550px) {
     font-size: 0.9rem;

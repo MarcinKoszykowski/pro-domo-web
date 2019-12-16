@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   margin-top: 35px;
   text-align: left;
   border: none;
-  transition: margin 0.2s, padding 0.2s;
+  transition-property: margin, padding;
 
   @media screen and (max-width: 800px) {
     margin-top: 30px;

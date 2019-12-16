@@ -32,7 +32,7 @@ const Text = styled.p`
     position: absolute;
     height: 100%;
     top: 0;
-    transition: transform 0.2s ease-in-out;
+    transition-property: transform;
   }
   &::before {
     left: -5px;

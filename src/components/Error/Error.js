@@ -8,7 +8,7 @@ const Wrapper = styled.section`
   text-align: center;
   margin: 0 auto;
   padding: 100px 0 150px;
-  transition: margin 0.2s;
+  transition-property: margin;
   max-width: 1600px;
 
   @media screen and (min-width: 1800px) {

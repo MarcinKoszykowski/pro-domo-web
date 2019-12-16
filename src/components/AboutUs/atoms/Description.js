@@ -6,7 +6,7 @@ const Description = styled.p`
   font-size: 1.3rem;
   line-height: 1.5;
   animation: ${animations.aboutUsTextAnimation} 1.5s ease-out 0.5s backwards;
-  transition: font-size 0.2s;
+  transition-property: font-size;
 
   @media screen and (min-width: 1800px) {
     font-size: 1.5rem;

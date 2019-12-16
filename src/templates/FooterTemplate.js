@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { greySuperLight, orange } from 'styled/colors';
+import { grey_super_light, orange } from 'styled/colors';
 import Footer from 'components/Footer/Footer';
 
 const Section = styled.section`
-  background-color: ${greySuperLight};
+  background-color: ${grey_super_light};
   border-top: 3px solid ${orange};
 `;
 

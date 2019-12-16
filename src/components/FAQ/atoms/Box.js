@@ -12,7 +12,7 @@ const Box = styled.button`
   z-index: 1;
   width: 90%;
   background-color: transparent;
-  transition: width 0.2s;
+  transition-property: width;
 
   &:hover ~ ${Text} {
     color: ${orange};

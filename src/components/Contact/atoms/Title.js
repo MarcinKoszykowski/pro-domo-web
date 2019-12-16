@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-const Title = styled.h2`
+const Title = styled.h3`
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 0 20px 30px;
-  transition: font-size 0.2s;
+  transition-property: font, margin;
 
   @media screen and (min-width: 1800px) {
     font-size: 2.8rem;

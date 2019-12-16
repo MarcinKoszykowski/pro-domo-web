@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   text-align: justify;
   overflow: hidden;
   border-bottom: 1px solid ${orange};
-  transition: font-size 0.2s, padding 0.2s;
+  transition-property: font, padding;
 
   @media screen and (max-width: 1000px) {
     font-size: 0.9rem;

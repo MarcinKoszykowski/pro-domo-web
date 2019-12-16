@@ -4,7 +4,6 @@ import AppContext from 'context';
 import GlobalStyle from 'styled/GlobalStyle';
 import { main, faq, form, pp, eq, pd, pdf } from 'data/routes';
 import ScrollButton from 'components/ScrollButton/ScrollButton';
-import IE from 'components/IE/IE';
 import Error from 'components/Error/Error';
 import Footer from 'templates/FooterTemplate';
 import Widgets from 'templates/WidgetsTemplate';
@@ -50,7 +49,6 @@ const Root = () => {
         <Widgets />
         <Footer />
         <ScrollButton />
-        <IE />
       </BrowserRouter>
     </AppContext.Provider>
   );
